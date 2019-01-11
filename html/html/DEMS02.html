@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta name="robots" content="noindex, nofollow" />
+	<title>목록 | MBE | PC관리 시스템</title>
+	<link rel="stylesheet" href="../common/css/reset.css" />
+	<link rel="stylesheet" href="../common/css/common.css" />
+	<link rel="stylesheet" href="../common/css/jquery-ui.min.css" />
+	<link rel="stylesheet" href="../common/css/etc.css" />
+	<!-- 사이트 별 정의된 스타일시트 삽입 : 시작 -->
+	<link rel="stylesheet" href="../common/css/hs_pc.css" />
+	<!-- 사이트 별 정의된 스타일시트 삽입 : 종료 -->
+	<script src="../common/js/jquery-3.3.1.min.js"></script>
+	<script src="../common/js/jquery-ui.min.js"></script>
+	<script src="../common/js/hs_common.js"></script>
+	<!-- 팝업창 띄우기 -->
+	<script>
+		function openPop(pop,winW,winH,scrollbars) {
+		//min(250, 150) IE7, IE8
+	   var status = "toolbar=no,location=no,directories=no,status=no,menubar=no,resizable=yes,scrollbars="+'yes'+", width="+winW+", height="+winH+",left=0, top=0";
+	   window.open(pop+'.html', 'win', status);
+	}
+	</script>
+
+</head>
+
+<body>
+	<!-- header -->
+	<header id="header">
+		<div style="height:95px;background:#eee">
+			<h1>header 영역입니다.</h1>
+		</div>
+	</header>
+	<!-- //header -->
+
+	<!-- contents -->
+	<div id="contents" class="contents">
+		<!-- location -->
+		<div class="location">
+			<h2>목록</h2>
+			<ul>
+				<li class="home"><a href="#n">Home</a></li>
+				<li><span>MBE(Management By Exception)</span></li>
+				<li><strong>목록</strong></li>
+			</ul>
+		</div>
+		<!-- //location -->
+
+		<!-- search_box -->
+		<div class="search_box">
+			<ul>
+				<li>
+					<div class="tit"><label for="inpPu">P U 담당</label></div>
+					<div class="sel">
+						<div class="input_box">
+							<input type="text" class="input_txt" id="inpPu" name="inpPu">
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="tit"><label for="inpTitle">제목</label></div>
+					<div class="sel">
+						<div class="input_box">
+							<input type="text" class="input_txt" id="inpTitle" name="inpTitle">
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="tit"><label for="inpQuery">쿼리</label></div>
+					<div class="sel">
+						<div class="input_box">
+							<input type="text" class="input_txt" id="inpQuery" name="inpQuery">
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+		<!-- //search_box -->
+
+		<!-- search_btn -->
+		<div class="search_btn">
+			<a href="#n" class="btn_gold">검색</a>
+			<a href="#n" class="btn_gold">작성</a>
+		</div>
+		<!-- //search_btn -->
+
+		<!-- search_result -->
+		<div class="search_result">
+			<div class="tbl">
+				<table>
+					<caption>목록 리스트</caption>
+					<colgroup>
+						<col style="width:40px">
+						<col>
+						<col style="width:120px">
+						<col style="width:120px">
+					</colgroup>
+					<thead>
+						<tr>
+							<th>No.</th>
+							<th>제목</th>
+							<th>유형</th>
+							<th>조회기간</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td colspan="4"><div class="nodata">조회된 내역이 없습니다.</div></td>
+						</tr>
+						<tr>
+							<td class="algC">1</td>
+							<td>자산지역이 없는 자산조회</td>
+							<td class="algC">Monitoring</td>
+							<td class="algC">없음</td>
+						</tr>
+						<tr>
+							<td class="algC">2</td>
+							<td>사용자미등록자산(창고보관,지급대기,사유재산,협력업체 제외) </td>
+							<td class="algC">Monitoring</td>
+							<td class="algC">일단위기간</td>
+						</tr>
+						<tr>
+							<td class="algC">&nbsp;</td>
+							<td>&nbsp;</td>
+							<td class="algC">&nbsp;</td>
+							<td class="algC">&nbsp;</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<!-- //search_result -->
+
+		<div class="paginate">
+			<a href="#n" class="pBtn first"><em>맨처음</em></a>
+			<a href="#n" class="pBtn prev"><em>이전페이지</em></a>
+			<strong><span>1</span></strong>
+			<a href="#n"><span>2</span></a>
+			<a href="#n"><span>3</span></a>
+			<a href="#n"><span>4</span></a>
+			<a href="#n"><span>5</span></a>
+			<a href="#n"><span>6</span></a>
+			<a href="#n"><span>7</span></a>
+			<a href="#n"><span>8</span></a>
+			<a href="#n"><span>9</span></a>
+			<a href="#n"><span>10</span></a>
+			<a href="#n" class="pBtn next"><em>다음페이지</em></a>
+			<a href="#n" class="pBtn end"><em>맨마지막</em></a>
+		</div>
+	</div>
+	<!-- //contents -->
+
+	<!-- footer -->
+	<footer id="footer">
+		<div class="footer_con">
+			<div class="foot_ci">
+				<span class="blind">HYOSUNG GlobalExcellence</span>
+			</div>
+			<div class="foot_copy">
+				<span class="copyright">COPYRIGHT &copy; 2019 HYOSUNG. ALL RIGHTS RESERVED.</span>
+			</div>
+		</div>
+	</footer>
+	<!-- //footer -->
+</body>
+
+</html>

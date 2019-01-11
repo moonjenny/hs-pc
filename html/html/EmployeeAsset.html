@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta name="robots" content="noindex, nofollow" />
+	<title>사원별 자산 조회 | 전산장비신청 | 지급관리 | PC관리 시스템</title>
+	<link rel="stylesheet" href="../common/css/reset.css" />
+	<link rel="stylesheet" href="../common/css/common.css" />
+	<link rel="stylesheet" href="../common/css/jquery-ui.min.css" />
+	<link rel="stylesheet" href="../common/css/etc.css" />
+	<!-- 사이트 별 정의된 스타일시트 삽입 : 시작 -->
+	<link rel="stylesheet" href="../common/css/hs_pc.css" />
+	<!-- 사이트 별 정의된 스타일시트 삽입 : 종료 -->
+	<script src="../common/js/jquery-3.3.1.min.js"></script>
+	<script src="../common/js/jquery-ui.min.js"></script>
+	<script src="../common/js/hs_common.js"></script>
+</head>
+
+<body>
+	<div id="pop_wrap">
+		<div class="pop_header">
+			<h1>사원별 자산 조회</h1>
+		</div>
+		<button type="button" class="btn_pop_close" onclick="window.close();">닫기</button>
+		<!-- pop_contents -->
+		<div class="pop_contents">
+			<div class="notice_box">
+				<span class="ico">선택항목에 체크를 하시고 선택 버턴을 클릭하셔야만 반납자산에 반영 됩니다.</span>
+				<div class="pop_btnbox">
+					<a href="#n" class="btn_gold">선택</a>
+				</div>
+			</div>
+			<div class="pop_result">
+				<div class="tbl">
+					<table>
+						<caption>사원별 자산 조회 결과</caption>
+						<colgroup>
+							<col style="width:35px">
+							<col style="width:70px">
+							<col style="width:160px">
+							<col style="width:65px">
+							<col style="width:120px">
+							<col>
+						</colgroup>
+						<thead>
+							<tr>
+								<th>선택</th>
+								<th>사원명</th>
+								<th>소속</th>
+								<th>자산번호</th>
+								<th>자산명</th>
+								<th>Description</th>
+							</tr>
+						</thead>
+						<tbody>
+							<!-- 데이터 없을 경우 -->
+							<tr>
+								<td colspan="6"><div class="nodata">데이터가 존재 하지 않습니다.</div></td>
+							</tr>
+							<!-- //데이터 없을 경우 -->
+							<tr>
+								<td class="algC">
+									<label for="chk1Asset1" class="blind">자산 선택하기</label>
+									<input type="checkbox" id="chk1Asset1">
+								</td>
+								<td>박종근</td>
+								<td>섬유PG 직물/염색PU 생산팀</td>
+								<td class="algC"><a href="#n">134565</a></td>
+								<td>PC 본체</td>
+								<td>CPU : Inteli5-45903.3GHz,RAM : 메모리4GB,HDD : HDD500GB,VGA : 일반용,LANCARD : 있음,SOUND : 없음,ODD : DVD R,운영체제 : MSWindows 7</td>
+							</tr>
+							<tr>
+								<td class="algC">
+									<label for="chk1Asset2" class="blind">자산 선택하기</label>
+									<input type="checkbox" id="chk1Asset2">
+								</td>
+								<td>사공종근</td>
+								<td>소속</td>
+								<td class="algC"><a href="#n">134565</a></td>
+								<td>INKJET 프린터</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td class="algC">
+									<label for="chk1Asset3" class="blind">자산 선택하기</label>
+									<input type="checkbox" id="chk1Asset3">
+								</td>
+								<td></td>
+								<td></td>
+								<td class="algC"><a href="#n">&nbsp;</a></td>
+								<td></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td class="algC">
+									<label for="chk1Asset4" class="blind">자산 선택하기</label>
+									<input type="checkbox" id="chk1Asset4">
+								</td>
+								<td></td>
+								<td></td>
+								<td class="algC"><a href="#n">&nbsp;</a></td>
+								<td></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td class="algC">
+									<label for="chk1Asset5" class="blind">자산 선택하기</label>
+									<input type="checkbox" id="chk1Asset5">
+								</td>
+								<td></td>
+								<td></td>
+								<td class="algC"><a href="#n">&nbsp;</a></td>
+								<td></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td class="algC">
+									<label for="chk1Asset6" class="blind">자산 선택하기</label>
+									<input type="checkbox" id="chk1Asset6">
+								</td>
+								<td></td>
+								<td></td>
+								<td class="algC"><a href="#n">&nbsp;</a></td>
+								<td></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td class="algC">
+									<label for="chk1Asset7" class="blind">자산 선택하기</label>
+									<input type="checkbox" id="chk1Asset7">
+								</td>
+								<td></td>
+								<td></td>
+								<td class="algC"><a href="#n">&nbsp;</a></td>
+								<td></td>
+								<td></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+			<div class="paginate">
+				<a href="#n" class="pBtn first"><em>맨처음</em></a>
+				<a href="#n" class="pBtn prev"><em>이전페이지</em></a>
+				<strong><span>1</span></strong>
+				<a href="#n"><span>2</span></a>
+				<a href="#n"><span>3</span></a>
+				<a href="#n"><span>4</span></a>
+				<a href="#n"><span>5</span></a>
+				<a href="#n"><span>6</span></a>
+				<a href="#n"><span>7</span></a>
+				<a href="#n"><span>8</span></a>
+				<a href="#n"><span>9</span></a>
+				<a href="#n"><span>10</span></a>
+				<a href="#n" class="pBtn next"><em>다음페이지</em></a>
+				<a href="#n" class="pBtn end"><em>맨마지막</em></a>
+			</div>
+		</div>
+		<!-- //pop_contents -->
+	</div>
+	<!-- //pop_wrap -->
+</body>
+
+</html>

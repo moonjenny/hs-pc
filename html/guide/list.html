@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta name="robots" content="noindex, nofollow" />
+	<title>사이트가이드 | 효성 웹기반 업무시스템</title>
+	<link rel="stylesheet" href="../common/css/reset.css" />
+	<link rel="stylesheet" href="../common/css/common.css" />
+	<!-- 사이트 별 정의된 스타일시트 삽입 : 시작 -->
+    <link rel="stylesheet" href="com/guide.css" />
+	<!-- 사이트 별 정의된 스타일시트 삽입 : 종료 -->
+	<link rel="stylesheet" href="../common/css/fontawesome.min.css" />
+	<link rel="stylesheet" href="../common/css/jquery-ui.min.css" />
+	<link rel="stylesheet" href="../common/css/etc.css" />
+	<script src="../common/js/jquery-3.3.1.min.js"></script>
+	<script src="../common/js/jquery-ui.min.js"></script>
+</head>
+
+<body>
+	<div id="wrap">
+		<!-- header s -->
+		<div id="header">
+			<h1>효성 웹 기반 업무시스템 웹 표준화(2차) - PC관리시스템</h1>
+			<ul class="gnb">
+				<li><a href="index.html">개요</a></li>
+				<li><a href="structure.html">디렉토리 구조</a></li>
+				<li><a href="guide.html">요소 마크업</a></li>
+				<li><a href="object.html">자주 사용하는 오브젝트</a></li>
+				<li><a href="list.html">퍼블리싱 리스트</a></li>
+			</ul>
+		</div>
+		<!--// header e -->
+
+		<!-- container s -->
+		<div id="container">
+			<h2 class="h2_tit">기본정의</h2>
+			<div class="conbox">
+				<ul>
+					<li>기본 100%를 활용하는 풀-브라우징으로 적용하며, 최소해상도는 1024px, 컨텐츠의 최대 해상도는 100%로 구현 : width:100% / min-width:1000px 기준임</li>
+					<li>기준 브라우저는 IE9. 크로스브라우징의 범위 : IE9(화면유지) ~ Edge, 구글크롬, 파이어폭스, 사파리</li>
+					<li>Html Validator 통과를 원칙으로 함 <a href="https://validator.w3.org/" target="_blank" class="txt_ing">링크바로가기</a></li>
+					<li>기본 주석 및 개발 전달 주석 필히 기재</li>
+					<li>[주의]서버에서 파일이 덮여쓰여지지 않도록 주의할것. 반드시 로컬에 백업할것</li>
+				</ul>
+			</div>
+			<h2 class="h2_tit">퍼블리싱 리스트<span class="process">진행현황안내 : <span class="txt_ok">빨강-완료일/검수일</span>, <span class="txt_ing">파랑-진행중</span>, <span class="txt_mod">검정-수정일</span></span></h2>
+			<div id="g_content">
+				<table id="focus" class="mlist">
+					<colgroup>
+						<col style="width:5%" />
+						<col style="width:13%" />
+						<col style="width:20%" />
+						<col style="width:5%" />
+						<col style="width:12%" />
+						<col style="width:3%" />
+						<col style="width:auto" />
+						<col style="width:10%" />
+						<col style="width:15%" />
+					</colgroup>
+					<thead>
+						<tr>
+							<th class="first">NUM</th>
+							<th>1Depth</th>
+							<th>2Depth</th>
+							<th>팝업</th>
+							<th>ID(.jsp)</th>
+							<th>W3C</th>
+							<th>LINK</th>
+							<th>진행현황</th>
+							<th>비고</th>
+						</tr>
+					</thead>
+					<tbody class="tbl_result"></tbody>
+				</table>
+			</div>
+		</div>
+		<!--// container e -->
+		<div id="footer">
+			Copyright &copy; All Right Reserved
+		</div>
+		<p class="btn_top"><a href="#top"><img src="img/btn_gotop.gif" alt="TOP" /></a></p>
+	</div>
+	<script>
+		$(document).ready(function(){
+			$(".gnb > li:nth-child(5) > a").addClass("on");
+			/*
+				depth1 : 1뎁스 명칭
+				depth2 : 2뎁스 명칭
+				files : 파일명
+				links : 파일의 경로 / 링크 클릭 시 확인 가능
+				process : 진행상태를 나타냄 / ok:완료(w3c 체크까지 완료), ing:진행중, mod:수정
+				dates : 날짜
+				etcs : 기타 의견
+				ends : 구분선 / 'OK'값을 기준으로 체크하며 'OK'값이 존재 시 구현된다.
+			*/
+			var result = [
+				{ depth1:"공통", depth2:"헤더,푸터", popup:"", files:"common_header.html", links:"../html/common_header.html", process:"ok", dates:"2018", etcs:"디자인 작업 후 퍼블예정", ends:"" },
+				{ depth1:"", depth2:"서브페이지", popup:"", files:"common_sub.html", links:"../html/common_sub.html", process:"ok", dates:"2018.12.12", etcs:"", ends:"" },
+				{ depth1:"", depth2:"팝업", popup:"POPUP", files:"common_popup.html", links:"../html/common_popup.html", process:"ok", dates:"2018.12.12", etcs:"", ends:"" },
+				{ depth1:"", depth2:"로딩중", popup:"", files:"common_loading.html", links:"../html/common_loading.html", process:"ing", dates:"2018", etcs:"", ends:"ok" },
+				{ depth1:"메인", depth2:"로그인", popup:"", files:"login.html", links:"../html/login.html", process:"ing", dates:"2018", etcs:"디자인 작업 후 퍼블예정", ends:"" },
+				{ depth1:"", depth2:"메인", popup:"", files:"main.html", links:"../html/main.html", process:"ing", dates:"2018", etcs:"디자인 작업 후 퍼블예정", ends:"ok" },
+				{ depth1:"지급관리", depth2:"전산장비신청", popup:"", files:"RMDI101I", links:"../html/RMDI101I.html", process:"ok", dates:"2018.12.13", etcs:"19.01.09 : 반납장비 체크박스로 변경", ends:"" },
+				{ depth1:"", depth2:"공통-사원 조회", popup:"POPUP", files:"EmployeeAll", links:"../html/EmployeeAll.html", process:"ok", dates:"2018.12.13", etcs:"19.01.08-파일명 수정", ends:"" },
+				{ depth1:"", depth2:"공통-사원별 자산 조회", popup:"POPUP", files:"EmployeeAsset", links:"../html/EmployeeAsset.html", process:"ok", dates:"2018.12.13", etcs:"19.01.08-파일명 수정", ends:"" },
+				{ depth1:"", depth2:"부품신청", popup:"", files:"RMDI104I", links:"../html/RMDI104I.html", process:"ok", dates:"2018.12.13", etcs:"", ends:"" },
+				{ depth1:"", depth2:"반납신청", popup:"", files:"RMDI102I", links:"../html/RMDI102I.html", process:"ok", dates:"2018.12.13", etcs:"", ends:"" },
+				{ depth1:"", depth2:"손망실보고", popup:"", files:"RMDI103I", links:"../html/RMDI103I.html", process:"ok", dates:"2018.12.13", etcs:"", ends:"" },
+				{ depth1:"", depth2:"신청문서조회", popup:"", files:"RMDI107V", links:"../html/RMDI107V.html", process:"ok", dates:"2018.12.14", etcs:"", ends:"" },
+				{ depth1:"", depth2:"신청내역상세", popup:"", files:"RMDI109V", links:"../html/RMDI109V.html", process:"ok", dates:"2018.12.14", etcs:"", ends:"" },
+				{ depth1:"", depth2:"신청내역상세(부품)", popup:"", files:"RMDI112V", links:"../html/RMDI112V.html", process:"ok", dates:"2018.12.14", etcs:"", ends:"" },
+				{ depth1:"", depth2:"재고조회", popup:"POPUP", files:"RMDI108V", links:"../html/RMDI108V.html", process:"ok", dates:"2018.12.14", etcs:"", ends:"" },
+				{ depth1:"", depth2:"구매재고조회", popup:"POPUP", files:"PMPR105V", links:"../html/PMPR105V.html", process:"ok", dates:"2018.12.14", etcs:"", ends:"" },
+				{ depth1:"", depth2:"신청문서승인반려", popup:"POPUP", files:"RMDI105I", links:"../html/RMDI105I.html", process:"ok", dates:"2018.12.27", etcs:"", ends:"" },
+				{ depth1:"", depth2:"신청문서진행상태", popup:"POPUP", files:"RMDI111V", links:"../html/RMDI111V.html", process:"ok", dates:"2018.12.14", etcs:"", ends:"" },
+				{ depth1:"", depth2:"설치/회수요청내역조회", popup:"", files:"IMRQ102V", links:"../html/IMRQ102V.html", process:"ok", dates:"2018.12.27", etcs:"", ends:"" },
+				{ depth1:"", depth2:"설치/회수요청내역조회상세", popup:"", files:"IMRQ103V", links:"../html/IMRQ103V.html", process:"ok", dates:"2018.12.27", etcs:"", ends:"" },
+				{ depth1:"", depth2:"설치/회수요청내역조회상세(부품)", popup:"", files:"IMRQ104I", links:"../html/IMRQ104I.html", process:"ok", dates:"2018.12.27", etcs:"", ends:"" },
+				{ depth1:"", depth2:"설치/회수내역입력", popup:"", files:"IMRS101I", links:"../html/IMRS101I.html", process:"ok", dates:"2018.12.27", etcs:"", ends:"" },
+				{ depth1:"", depth2:"자산등재", popup:"", files:"IMRS102V", links:"../html/IMRS102V.html", process:"ok", dates:"2018.12.27", etcs:"", ends:"" },
+				{ depth1:"", depth2:"설치/회수요청", popup:"", files:"IMRQ101I", links:"../html/IMRQ101I.html", process:"ok", dates:"2018.12.27", etcs:"", ends:"ok" },
+				// { depth1:"", depth2:"사용자조회", popup:"", files:"RMDI101I_POP01", links:"../html/RMDI101I_POP01.html", process:"ok", dates:"2018.12.13", etcs:"", ends:"ok" },
+				{ depth1:"구매관리", depth2:"구매내역등록", popup:"", files:"PMPR101I", links:"../html/PMPR101I.html", process:"ok", dates:"2018.12.27", etcs:"", ends:"" },
+				{ depth1:"", depth2:"표준사양선택", popup:"", files:"PMPR101P", links:"../html/PMPR101P.html", process:"ok", dates:"2018.12.27", etcs:"", ends:"" },
+				{ depth1:"", depth2:"구매내역수정", popup:"", files:"PMPR104U", links:"../html/PMPR104U.html", process:"ing", dates:"2018.12.28", etcs:"폰트 깨져서 나옴", ends:"" },
+				{ depth1:"", depth2:"구매내역수정(부품)", popup:"", files:"PMPR108U", links:"../html/PMPR108U.html", process:"ing", dates:"2018.12.28", etcs:"폰트 깨져서 나옴", ends:"" },
+				{ depth1:"", depth2:"구매내역수정-자산종류상세내역", popup:"POPUP", files:"RMDI105P", links:"../html/RMDI105P.html", process:"ok", dates:"2018.01.08", etcs:"", ends:"" },
+				{ depth1:"", depth2:"구매내역조회", popup:"", files:"PMPR102V", links:"../html/PMPR102V.html", process:"ok", dates:"2018.12.28", etcs:"", ends:"" },
+				{ depth1:"", depth2:"전산장비운영비집행계획", popup:"", files:"PMPL101I", links:"../html/PMPL101I.html", process:"ok", dates:"2018.12.28", etcs:"", ends:"" },
+				{ depth1:"", depth2:"전장장비운영비집행계획대실적", popup:"", files:"PMPL103Q", links:"../html/PMPL103Q.html", process:"ok", dates:"2018.12.28", etcs:"", ends:"" },
+				{ depth1:"", depth2:"구매내역명세서(전산장비)", popup:"", files:"HMRP107Q", links:"../html/HMRP107Q.html", process:"ok", dates:"2018.12.28", etcs:"", ends:"" },
+				{ depth1:"", depth2:"구매내역명세서(부품)", popup:"", files:"HMRP108Q", links:"../html/HMRP108Q.html", process:"ok", dates:"2018.12.28", etcs:"", ends:"" },
+				{ depth1:"", depth2:"제조년도별보유현황", popup:"", files:"HMRP990Q", links:"../html/HMRP990Q.html", process:"ok", dates:"2018.12.28", etcs:"", ends:"ok" },
+				{ depth1:"실사관리", depth2:"실사기간설정", popup:"", files:"SMSU107I", links:"../html/SMSU107I.html", process:"ok", dates:"2019.01.02", etcs:"", ends:"" },
+				{ depth1:"", depth2:"실사내역등록", popup:"", files:"SMSU108I", links:"../html/SMSU108I.html", process:"ok", dates:"2019.01.02", etcs:"", ends:"" },
+				{ depth1:"", depth2:"팀명 조회", popup:"POPUP", files:"DeptCode", links:"../html/DeptCode.html", process:"ok", dates:"2019.01.08", etcs:"", ends:"" },
+				{ depth1:"", depth2:"실사내역수정", popup:"", files:"SMSU101I", links:"../html/SMSU101I.html", process:"ok", dates:"2019.01.02", etcs:"", ends:"" },
+				{ depth1:"", depth2:"자체실사", popup:"", files:"SMSU102I", links:"../html/SMSU102I.html", process:"ok", dates:"2019.01.02", etcs:"", ends:"" },
+				{ depth1:"", depth2:"실사내역반영(소속별)", popup:"", files:"SMSU106V", links:"../html/SMSU106V.html", process:"ok", dates:"2019.01.02", etcs:"", ends:"" },
+				{ depth1:"", depth2:"실사내역반영(자산번호별)", popup:"", files:"SMSU105V", links:"../html/SMSU105V.html", process:"ok", dates:"2019.01.02", etcs:"", ends:"" },
+				{ depth1:"", depth2:"NetClient내역비교(소속별)", popup:"", files:"SMNC101V", links:"../html/SMNC101V.html", process:"ok", dates:"2019.01.02", etcs:"", ends:"" },
+				{ depth1:"", depth2:"NetClient내역비교(자산번호별)", popup:"", files:"SMNC102V", links:"../html/SMNC102V.html", process:"ok", dates:"2019.01.02", etcs:"", ends:"ok" },
+				{ depth1:"이력관리", depth2:"자산내역수정", popup:"", files:"SMSU103I", links:"../html/SMSU103I.html", process:"ok", dates:"2019.01.02", etcs:"", ends:"" },
+				{ depth1:"", depth2:"변경이력조회", popup:"", files:"HMHI101V", links:"../html/HMHI101V.html", process:"ok", dates:"2019.01.02", etcs:"", ends:"" },
+				{ depth1:"", depth2:"모니터 조회", popup:"POPUP", files:"Monitor", links:"../html/Monitor.html", process:"ok", dates:"2019.01.08", etcs:"", ends:"" },
+				{ depth1:"", depth2:"팁별PC현황", popup:"", files:"HMHI102V", links:"../html/HMHI102V.html", process:"ok", dates:"2019.01.02", etcs:"", ends:"" },
+				{ depth1:"", depth2:"PC보유현황", popup:"", files:"HIRP101Q", links:"../html/HIRP101Q.html", process:"ok", dates:"2019.01.02", etcs:"", ends:"" },
+				{ depth1:"", depth2:"창고재고명세서", popup:"", files:"HIRP106Q", links:"../html/HIRP106Q.html", process:"ok", dates:"2019.01.02", etcs:"", ends:"" },
+				{ depth1:"", depth2:"자산별지역별조회", popup:"", files:"HMHI108V", links:"../html/HMHI108V.html", process:"ok", dates:"2019.01.03", etcs:"", ends:"" },
+				{ depth1:"", depth2:"팀별소프트웨어현황", popup:"", files:"HMSW101I", links:"../html/HMSW101I.html", process:"ok", dates:"2019.01.04", etcs:"", ends:"" },
+				{ depth1:"", depth2:"소프트웨어사용현황", popup:"", files:"HMSW102V", links:"../html/HMSW102V.html", process:"ok", dates:"2019.01.04", etcs:"", ends:"" },
+				{ depth1:"", depth2:"다양한 조회", popup:"", files:"HMHI107V", links:"../html/HMHI107V.html", process:"ok", dates:"2019.01.04", etcs:"", ends:"" },
+				{ depth1:"", depth2:"대여장비입력", popup:"", files:"SMSU999I", links:"../html/SMSU999I.html", process:"ok", dates:"2019.01.04", etcs:"", ends:"" },
+				{ depth1:"", depth2:"대여장비현황", popup:"", files:"SMSU999V", links:"../html/SMSU999V.html", process:"ok", dates:"2019.01.04", etcs:"", ends:"ok" },
+				{ depth1:"폐기관리", depth2:"폐기대상선정", popup:"", files:"DMDU101V", links:"../html/DMDU101V.html", process:"ok", dates:"2019.01.04", etcs:"", ends:"" },
+				{ depth1:"", depth2:"폐기대상조회및정리", popup:"", files:"DMDU102V", links:"../html/DMDU102V.html", process:"ok", dates:"2019.01.04", etcs:"", ends:"ok" },
+				{ depth1:"기준코드", depth2:"기준코드관리", popup:"", files:"SMSC101I", links:"../html/SMSC101I.html", process:"ok", dates:"2019.01.04", etcs:"", ends:"" },
+				{ depth1:"", depth2:"부품코드관리", popup:"", files:"SMSC102I", links:"../html/SMSC102I.html", process:"ok", dates:"2019.01.04", etcs:"", ends:"" },
+				{ depth1:"", depth2:"소프트웨어코드관리", popup:"", files:"SMSC103I", links:"../html/SMSC103I.html", process:"ok", dates:"2019.01.04", etcs:"", ends:"" },
+				{ depth1:"", depth2:"표준사양조회", popup:"", files:"SMSP102Q", links:"../html/SMSP102Q.html", process:"ok", dates:"2019.01.04", etcs:"", ends:"" },
+				{ depth1:"", depth2:"인사변경조회", popup:"", files:"SMIC101I", links:"../html/SMIC101I.html", process:"ok", dates:"2019.01.04", etcs:"", ends:"" },
+				{ depth1:"", depth2:"자산위치관리", popup:"", files:"SMSP902I", links:"../html/SMSP902I.html", process:"ok", dates:"2019.01.04", etcs:"", ends:"" },
+				{ depth1:"", depth2:"발령정보조회", popup:"", files:"SMIC102V", links:"../html/SMIC102V.html", process:"ok", dates:"2019.01.04", etcs:"", ends:"ok" },
+				{ depth1:"IP신청관리", depth2:"IP신청", popup:"", files:"RMPI101I", links:"../html/RMPI101I.html", process:"ok", dates:"2019.01.07", etcs:"", ends:"" },
+				{ depth1:"", depth2:"IP신청문서조회", popup:"", files:"RMPI103V", links:"../html/RMPI103V.html", process:"ok", dates:"2019.01.04", etcs:"", ends:"" },
+				{ depth1:"", depth2:"IP신청문서승인반려", popup:"", files:"RMPI105I", links:"../html/RMPI105I.html", process:"ok", dates:"2019.01.07", etcs:"", ends:"ok" },
+				{ depth1:"MBE(Management By Exception)", depth2:"목록", popup:"", files:"DEMS02", links:"../html/DEMS02.html", process:"ok", dates:"2019.01.11", etcs:"", ends:"" }
+			];
+			var output = "";
+			var result_tr = result.length;
+			$.each(result,function(index,item){
+				output += "<tr>";
+				output += "<td>"+(index+1)+"</td>";
+				output += "<td class='itemtit02'>"+item.depth1+"</td>";
+				output += "<td class='alL'>"+item.depth2+"</td>";
+				output += "<td class='alC'>"+item.popup+"</td>";
+				output += "<td>"+item.files+"</td>";
+				if(item.process == "ok"){
+					output += "<td>○</td>";
+				}else{
+					output += "<td></td>";
+				}
+				output += "<td class='alL'><a href="+item.links+" target='_blank'>"+item.links+"</a></td>";
+				output += "<td><span class='txt_"+item.process+"'>"+item.dates+"</span></td>";
+				if(item.etcs == null){
+					output += "<td></td>";
+				}else{
+					output += "<td class='alL'>"+item.etcs+"</td>";
+				}
+				output += "</tr>"
+				if(item.ends == "ok"){
+					output += "<tr><td colspan='9' class='borB'></td></tr>"
+				}
+			})
+			$(".tbl_result").html(output);
+		});
+	</script>
+</body>
+</html>

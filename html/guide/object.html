@@ -1,0 +1,692 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta name="robots" content="noindex, nofollow" />
+	<title>사이트가이드 | 효성 웹기반 업무시스템</title>
+	<link rel="stylesheet" href="../common/css/reset.css" />
+	<link rel="stylesheet" href="../common/css/common.css" />
+	<!-- 사이트 별 정의된 스타일시트 삽입 : 시작 -->
+	<link rel="stylesheet" href="com/guide.css" />
+	<link rel="stylesheet" href="../common/css/hs_pc.css" />
+	<!-- 사이트 별 정의된 스타일시트 삽입 : 종료 -->
+	<link rel="stylesheet" href="../common/css/all.min.css" />
+	<link rel="stylesheet" href="../common/css/jquery-ui.min.css" />
+	<link rel="stylesheet" href="../common/css/etc.css" />
+	<script src="../common/js/jquery-3.3.1.min.js"></script>
+	<script src="../common/js/jquery-ui.min.js"></script>
+	<script src="../common/js/hs_common.js"></script>
+	<!-- 달력 -->
+	<script>
+		$( function() {
+			$.datepicker.setDefaults( $.datepicker.regional[ "ko" ] );
+			$( "#datepicker" ).datepicker({
+				showOn: "button",
+				buttonText: "날짜 선택하기"
+			});
+			$( "#datepicker2" ).datepicker({
+				showOn: "button",
+				buttonText: "날짜 선택하기"
+			});
+			$( "#datepicker3" ).datepicker({
+				showOn: "button",
+				buttonText: "날짜 선택하기"
+			});
+			$( "#datepicker_sch1" ).datepicker({
+				showOn: "button",
+				buttonText: "날짜 선택하기"
+			});
+			$( "#datepicker_sch2" ).datepicker({
+				showOn: "button",
+				buttonText: "날짜 선택하기"
+			});
+		});
+	</script>
+</head>
+
+<body>
+	<div id="wrap">
+		<!-- header s -->
+		<div id="header">
+			<h1>효성 웹 기반 업무시스템 웹 표준화(2차) - PC관리시스템</h1>
+			<ul class="gnb">
+				<li><a href="index.html">개요</a></li>
+				<li><a href="structure.html">디렉토리 구조</a></li>
+				<li><a href="guide.html">요소 마크업</a></li>
+				<li><a href="object.html">자주 사용하는 오브젝트</a></li>
+				<li><a href="list.html">퍼블리싱 리스트</a></li>
+			</ul>
+		</div>
+		<!--// header e -->
+
+		<!-- container s -->
+		<div id="container">
+			<h2 class="h2_tit">자주 사용하는 오브젝트</h2>
+			<div class="conbox">
+				<ul>
+					<li>본 작업에 많이 사용되는 요소에 대한 소스코드 페이지 입니다.</li>
+				</ul>
+			</div>
+			<!-- CONTENT -->
+			<div class="contents" id="contents">
+				<div class="g_menu">
+					<ul>
+						<li class="on">테이블</li>
+						<li>팝업</li>
+						<li>검색</li>
+						<li>버튼</li>
+					</ul>
+				</div>
+
+				<div class="g_section">
+					<!-- 탭1 명칭 -->
+					<div class="con" style="display:block">
+						<div class="g_title">테이블 내 자주사용하는 요소들</div>
+						<ul class="g_guide">
+							<li>팝업열기, 달력, 셀렉트박스 2개</li>
+						</ul>
+						<div class="g_html">
+<div class="tbl">
+	<table>
+		<caption>사원조회 팝업열기</caption>
+		<colgroup>
+			<col style="width:120px">
+			<col>
+		</colgroup>
+		<tbody>
+			<tr>
+				<th>사원조회 팝업열기</th>
+				<td>
+					<div class="input_box">
+						<input type="text" class="input_txt">
+						<a href="#n" class="btn_openpop" title="사원 조회 팝업열기"><span>사원 조회 팝업열기</span></a>
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<th>달력</th>
+				<td>
+					<input type="text" class="input_txt" value="2018-12-17" id="datepicker">
+				</td>
+			</tr>
+			<tr>
+				<th>달력(기간설정)</th>
+				<td>
+					<input type="text" class="input_txt" value="2018-12-17" id="datepicker2"> ~
+					<input type="text" class="input_txt" value="2018-12-17" id="datepicker3">
+				</td>
+			</tr>
+			<tr>
+				<th>인풋박스</th>
+				<td>
+					<input type="text" class="input_txt">
+				</td>
+			</tr>
+			<tr>
+				<th>셀렉트박스</th>
+				<td>
+					<select name="selBasic" id="selBasic">
+						<option>옵션명</option>
+						<option>옵션명</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<th>셀렉트박스 2개</th>
+				<td>
+					<select name="selReason" id="selReason" class="w_half">
+						<option>옵션명</option>
+						<option>옵션명</option>
+					</select>
+					<select name="selReason" id="selReason2" class="w_half">
+						<option>옵션명</option>
+						<option>옵션명</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<th>왼쪽 정렬</th>
+				<td class="algL">왼쪽 정렬</td>
+			</tr>
+			<tr>
+				<th>가운데 정렬</th>
+				<td class="algC">가운데 정렬</td>
+			</tr>
+			<tr>
+				<th>오른쪽 정렬</th>
+				<td class="algR">오른쪽 정렬</td>
+			</tr>
+			<tr>
+				<th>링크일 경우</th>
+				<td><a href="n#"><em>링크 입니다. 마우스오버시 라인이 생깁니다.</em></a></td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+						</div>
+						<a href="#n" class="source">소스보기</a>
+						<hr />
+
+
+						<div class="g_title">가로 스크롤 되는 테이블</div>
+						<ul class="g_guide">
+							<li>테이블의 행(Row)의 내용이 많을 경우에 스크롤이 생기도록 작업이 가능합니다.</li>
+							<li><strong> div class="tbl scrollx"</strong> 추가하고, <strong> table style="width:2000px"</strong> 테이블내에 직접 스타일을 줍니다</li>
+						</ul>
+						<div class="g_html">
+<div class="tbl scrollx">
+	<table style="width:2000px">
+		<caption>자산등재조회 리스트</caption>
+		<colgroup>
+			<col style="width:40px">
+			<col style="width:70px">
+			<col style="width:70px">
+			<col style="width:65px">
+			<col style="width:120px">
+			<col style="width:80px">
+			<col>
+			<col style="width:85px">
+			<col style="width:90px">
+			<col style="width:100px">
+			<col style="width:100px">
+			<col style="width:140px">
+			<col style="width:180px">
+			<col style="width:140px">
+			<col style="width:140px">
+			<col style="width:120px">
+			<col style="width:120px">
+			<col style="width:120px">
+		</colgroup>
+		<thead>
+			<tr>
+				<th>&nbsp;</th>
+				<th>처리구분</th>
+				<th>문서번호</th>
+				<th>자산번호</th>
+				<th>시리얼</th>
+				<th>사용자</th>
+				<th>사용자소속</th>
+				<th>설치일자</th>
+				<th>설치담당자</th>
+				<th>자산종류</th>
+				<th>제조사</th>
+				<th>모델명</th>
+				<th colspan="6">사양</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td colspan="18"><div class="nodata">데이터가 존재 하지 않습니다.</div></td>
+			</tr>
+			<tr>
+				<td class="algC">
+					<label for="chkListing1" class="blind">자산등재 체크1</label>
+					<input type="checkbox" id="chkListing1">
+				</td>
+				<td>지급</td>
+				<td class="algC">247892</td>
+				<td class="algC">104883</td>
+				<td>CN0FC2377161871GB592</td>
+				<td>손우혁</td>
+				<td>효성중공업(주) 중공업PG 전력PU 차단기생산기술팀</td>
+				<td class="algC">2018-12-17</td>
+				<td>손우혁</td>
+				<td>LCD 모니터	</td>
+				<td>DELL</td>
+				<td>ThinkPad T420</td>
+				<td>
+					<span class="txt">CPU:Intel i5-2520M 2.5 GHz</span>
+				</td>
+				<td>
+					<span class="txt">RAM: 메모리 4096 MB</span>
+				</td>
+				<td>
+					<span class="txt">HDD: HDD 320 GB</span>
+				</td>
+				<td>
+					<span class="txt">VGA: 일반용</span>
+				</td>
+				<td>
+					<span class="txt">LANCARD: 있음</span>
+				</td>
+				<td>
+					<span class="txt">SOUND: 없음</span>
+				</td>
+			</tr>
+			<tr>
+				<td class="algC">
+					<label for="chkListing2" class="blind">자산등재 체크2</label>
+					<input type="checkbox" id="chkListing2">
+				</td>
+				<td>지급</td>
+				<td class="algC">247892</td>
+				<td class="algC">104883</td>
+				<td>CN0FC2377161871GB592</td>
+				<td>손우혁</td>
+				<td>효성중공업(주) 중공업PG 전력PU 차단기생산기술팀</td>
+				<td class="algC">2018-12-17</td>
+				<td>손우혁</td>
+				<td>LCD 모니터	</td>
+				<td>DELL</td>
+				<td>ThinkPad T420</td>
+				<td>
+					<span class="txt">CPU:Intel i5-2520M 2.5 GHz</span>
+				</td>
+				<td>
+					<span class="txt">RAM: 메모리 4096 MB</span>
+				</td>
+				<td>
+					<span class="txt">HDD: HDD 320 GB</span>
+				</td>
+				<td>
+					<span class="txt">VGA: 일반용</span>
+				</td>
+				<td>
+					<span class="txt">LANCARD: 있음</span>
+				</td>
+				<td>
+					<span class="txt">SOUND: 없음</span>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+						</div>
+						<a href="#n" class="source">소스보기</a>
+						<hr />
+
+						<div class="g_title">세로 스크롤 되는 테이블</div>
+						<ul class="g_guide">
+							<li>테이블의 열(Column)의 내용이 많을 경우에 스크롤이 생기도록 작업이 가능합니다.</li>
+							<li>주로 팝업페이지에서 사용됩니다.</li>
+							<li><strong> div class="tbl" style="height:360px"</strong> 추가하고 height값을 추가해 줍니다.</li>
+						</ul>
+						<div class="g_html">
+<div class="tbl">
+	<table>
+		<caption>세로 스크롤 되는 테이블 헤더</caption>
+		<colgroup>
+			<col style="width:40px">
+			<col style="width:80px">
+			<col style="width:80px">
+			<col>
+			<col style="width:140px">
+			<col style="width:200px">
+		</colgroup>
+		<tbody>
+			<tr>
+				<th>선택</th>
+				<th>적용시작일</th>
+				<th>적용종료일</th>
+				<th>자산종류</th>
+				<th>사양구분</th>
+				<th>표준사양 모델</th>
+			</tr>
+		</tbody>
+	</table>
+</div>
+<div class="tbl" style="height:360px">
+	<table>
+		<caption>표준사양선택 리스트</caption>
+		<colgroup>
+			<col style="width:40px">
+			<col style="width:80px">
+			<col style="width:80px">
+			<col>
+			<col style="width:140px">
+			<col style="width:200px">
+		</colgroup>
+		<tbody>
+			<tr>
+				<td colspan="6">
+					<div class="nodata">데이터가 존재 하지 않습니다.</div>
+				</td>
+			</tr>
+			<tr>
+				<td class="algC">
+					<label for="rdoSpec1" class="blind">표준사양 선택하기</label>
+					<input type="radio" id="rdoSpec1">
+				</td>
+				<td class="algC">2018-01-19</td>
+				<td class="algC">2018-12-31</td>
+				<td>노트북PC</td>
+				<td>구매표준사양</td>
+				<td>레노버 ThinkPad T470s</td>
+			</tr>
+			<tr>
+				<td class="algC">
+					<label for="rdoSpec2" class="blind">표준사양 선택하기</label>
+					<input type="radio" id="rdoSpec2">
+				</td>
+				<td class="algC">&nbsp;</td>
+				<td class="algC">&nbsp;</td>
+				<td>&nbsp;</td>
+				<td>&nbsp;</td>
+				<td>&nbsp;</td>
+			</tr>
+			<tr>
+				<td class="algC">&nbsp;</td>
+				<td class="algC">&nbsp;</td>
+				<td class="algC">&nbsp;</td>
+				<td>&nbsp;</td>
+				<td>&nbsp;</td>
+				<td>&nbsp;</td>
+			</tr>
+			<tr>
+				<td class="algC">&nbsp;</td>
+				<td class="algC">&nbsp;</td>
+				<td class="algC">&nbsp;</td>
+				<td>&nbsp;</td>
+				<td>&nbsp;</td>
+				<td>&nbsp;</td>
+			</tr>
+			<tr>
+				<td class="algC">&nbsp;</td>
+				<td class="algC">&nbsp;</td>
+				<td class="algC">&nbsp;</td>
+				<td>&nbsp;</td>
+				<td>&nbsp;</td>
+				<td>&nbsp;</td>
+			</tr>
+			<tr>
+				<td class="algC">&nbsp;</td>
+				<td class="algC">&nbsp;</td>
+				<td class="algC">&nbsp;</td>
+				<td>&nbsp;</td>
+				<td>&nbsp;</td>
+				<td>&nbsp;</td>
+			</tr>
+			<tr>
+				<td class="algC">&nbsp;</td>
+				<td class="algC">&nbsp;</td>
+				<td class="algC">&nbsp;</td>
+				<td>&nbsp;</td>
+				<td>&nbsp;</td>
+				<td>&nbsp;</td>
+			</tr>
+			<tr>
+				<td class="algC">&nbsp;</td>
+				<td class="algC">&nbsp;</td>
+				<td class="algC">&nbsp;</td>
+				<td>&nbsp;</td>
+				<td>&nbsp;</td>
+				<td>&nbsp;</td>
+			</tr>
+			<tr>
+				<td class="algC">&nbsp;</td>
+				<td class="algC">&nbsp;</td>
+				<td class="algC">&nbsp;</td>
+				<td>&nbsp;</td>
+				<td>&nbsp;</td>
+				<td>&nbsp;</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+						</div>
+						<a href="#n" class="source">소스보기</a>
+						<hr />
+
+						<div class="g_title">테이블 정렬</div>
+						<ul class="g_guide">
+							<li>테이블 정렬 : Left, Center, Right 정렬</li>
+						</ul>
+						<div class="g_html">
+<div class="tbl">
+	<table>
+		<caption>신청내역상세(부품) 리스트</caption>
+		<colgroup>
+			<col>
+			<col>
+			<col>
+		</colgroup>
+		<thead>
+			<tr>
+				<th class="algL">왼쪽 정렬</th>
+				<th class="algC">가운데 정렬</th>
+				<th class="algR">오른쪽 정렬</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td class="algL">왼쪽 정렬</td>
+				<td class="algC">가운데 정렬</td>
+				<td class="algR">오른쪽 정렬</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+						</div>
+						<a href="#n" class="source">소스보기</a>
+						<hr />
+
+
+<!--
+						<div class="g_title">타이틀</div>
+						<ul class="g_guide">
+							<li>설명글 입니다.</li>
+						</ul>
+						<div class="g_html">
+
+						</div>
+						<a href="#n" class="source">소스보기</a>
+						<hr />
+
+						<div class="g_title">타이틀</div>
+						<ul class="g_guide">
+							<li>설명글 입니다.</li>
+						</ul>
+						<div class="g_html">
+
+						</div>
+						<a href="#n" class="source">소스보기</a>
+						<hr /> -->
+
+
+
+					</div>
+					<!--// .con -->
+
+					<!-- 탭2 명칭 -->
+					<div class="con">
+						<div class="g_title">팝업 기본 레이아웃 입니다.</div>
+						<ul class="g_guide">
+							<li></li>
+						</ul>
+						<div class="g_html">
+<div id="pop_wrap">
+	<div class="pop_header">
+		<h1>팝업 타이틀명</h1>
+	</div>
+	<button type="button" class="btn_pop_close" onclick="window.close();">닫기</button>
+	<div class="pop_contents">
+		popup sample page
+	</div>
+	<!-- //pop_contents -->
+</div>
+<!-- //pop_wrap -->
+						</div>
+						<a href="#n" class="source">소스보기</a>
+						<hr />
+					</div>
+					<!--// .con -->
+
+
+					<!-- 탭3 명칭 -->
+					<div class="con">
+						<div class="g_title">검색</div>
+						<ul class="g_guide">
+							<li></li>
+						</ul>
+						<div class="g_html">
+<div class="search_box">
+	<ul>
+		<li>
+			<div class="tit"><label for="selCompany">회사구분</label></div>
+			<div class="sel">
+				<select id="selCompany" name="selCompany">
+					<option>전체</option>
+					<option>효성</option>
+					<option>효성티앤씨</option>
+					<option>효성중공업</option>
+					<option>효성첨단소재</option>
+					<option>효성화학</option>
+				</select>
+			</div>
+		</li>
+		<li>
+			<div class="tit"><label for="selAsset">자산종류</label></div>
+			<div class="sel">
+				<select id="selAsset" name="selAsset">
+					<option>전체</option>
+					<option>PC 본체</option>
+					<option>노트북PC</option>
+					<option>CRT 모니터</option>
+					<option>LCD 모니터</option>
+					<option>INKJET 프린터</option>
+					<option>LASER 프린터</option>
+					<option>DOT 프린터</option>
+					<option>스캐너</option>
+					<option>플로터</option>
+					<option>그룹형마이크</option>
+					<option>소프트웨어</option>
+					<option>부품</option>
+				</select>
+			</div>
+		</li>
+		<li>
+			<div class="tit"><label for="datepicker">설치일자</label></div>
+			<div class="sel">
+				<div class="date">
+					<input type="text" class="input_txt" value="2018-12-17" id="datepicker_sch1"> ~
+					<input type="text" class="input_txt" value="2018-12-31" id="datepicker_sch2">
+				</div>
+			</div>
+		</li>
+		<li>
+			<div class="tit"><label for="inpMember">사용자</label></div>
+			<div class="sel">
+				<div class="input_box">
+					<input type="text" class="input_txt" id="inpMember">
+					<a href="#n" class="btn_openpop" title="사원 조회 팝업열기"><span>사원 조회 팝업열기</span></a>
+				</div>
+			</div>
+		</li>
+	</ul>
+</div>
+<!-- search_btn -->
+<div class="search_btn">
+	<a href="#n" class="btn_gold">이전화면</a>
+	<a href="#n" class="btn_gold">조회</a>
+	<a href="#n" class="btn_gold">저장</a>
+	<a href="#n" class="btn_gold">엑셀</a>
+</div>
+<!-- //search_btn -->
+
+						</div>
+						<a href="#n" class="source">소스보기</a>
+						<hr />
+					</div>
+					<!--// .con -->
+
+
+					<!-- 탭4 명칭 -->
+					<div class="con">
+						<div class="g_title">버튼 레이아웃 입니다.</div>
+						<ul class="g_guide">
+							<li>검색 영역에 해당하는 버튼 마크업 입니다.</li>
+						</ul>
+						<div class="g_html">
+<!-- 검색버튼 -->
+<div class="search_btn">
+	<a href="#n" class="btn_gold">표준사양선택</a>
+	<a href="#n" class="btn_gold">설치/회수요청</a>
+	<a href="#n" class="btn_black">등록</a>
+	<a href="#n" class="btn_gold">저장</a>
+	<a href="#n" class="btn_gold">조회</a>
+	<a href="#n" class="btn_black">검은색 버튼</a>
+	<a href="#n" class="btn_white">흰색 버튼</a>
+</div>
+
+<!-- 팝업용 검색버튼 -->
+<div class="pop_btnbox">
+	<a href="#n" class="btn_gold">선택</a>
+	<a href="#n" class="btn_gold">검색</a>
+</div>
+						</div>
+						<a href="#n" class="source">소스보기</a>
+						<hr />
+
+
+					<!-- 탭5 명칭
+					<div class="con">
+						<div class="g_title">레이아웃 입니다.</div>
+						<ul class="g_guide">
+							<li></li>
+						</ul>
+						<div class="g_html">
+
+						</div>
+						<a href="#n" class="source">소스보기</a>
+						<hr />
+					</div>
+					<!--// .con -->
+
+
+					<!-- 탭6 명칭
+					<div class="con">
+						<div class="g_title">레이아웃 입니다.</div>
+						<ul class="g_guide">
+							<li></li>
+						</ul>
+						<div class="g_html">
+
+						</div>
+						<a href="#n" class="source">소스보기</a>
+						<hr />
+					</div>
+					<!--// .con -->
+
+
+				</div>
+			</div>
+			<!-- //CONTENT -->
+		</div>
+	</div>
+	<script>
+		$(document).ready(function(){
+			$(".gnb > li:nth-child(4) > a").addClass("on");
+			/*
+			$(".g_menu li").eq(4).addClass("on");
+			$(".contents .con").hide();
+			$(".contents .con").eq(4).show();
+			*/
+			$(".g_menu li").bind("click", function(){
+				gId = $(this).index();
+				$(".g_menu li").removeClass("on");
+				$(".g_menu li").eq(gId).addClass("on");
+				$(".contents .con").hide();
+				$(".contents .con").eq(gId).show();
+			});
+
+			//$(".btn").wrapInner("<em></em>");
+
+			$(".source").bind("click",function(){
+				if($(this).text()=="소스보기"){
+					$(this).text("소스닫기");
+					$(this).after("<div class='v_source'></div>");
+					$(this).next().toggle();
+					var a = $(this).prev().clone().html();
+					$(this).next().text(a);
+					$(this).next().wrapInner("<pre></pre>");
+				}else{
+					$(this).text("소스보기");
+					$(".v_source").remove();
+				}
+			});
+		});
+	</script>
+</body>
+</html>

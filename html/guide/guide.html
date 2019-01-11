@@ -1,0 +1,508 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta name="robots" content="noindex, nofollow" />
+	<title>사이트가이드 | 효성 웹기반 업무시스템</title>
+	<link rel="stylesheet" href="../common/css/reset.css" />
+	<link rel="stylesheet" href="../common/css/common.css" />
+	<!-- 사이트 별 정의된 스타일시트 삽입 : 시작 -->
+	<link rel="stylesheet" href="com/guide.css" />
+	<!-- <link rel="stylesheet" href="../common/css/hs_layout.css" /> -->
+	<!-- 사이트 별 정의된 스타일시트 삽입 : 종료 -->
+	<link rel="stylesheet" href="../common/css/all.min.css" />
+	<link rel="stylesheet" href="../common/css/jquery-ui.min.css" />
+	<link rel="stylesheet" href="../common/css/etc.css" />
+	<script src="../common/js/jquery-3.3.1.min.js"></script>
+	<script src="../common/js/jquery-ui.min.js"></script>
+	<style>
+.btn_pop_close{top:10px;right:10px;} /*가이드에서틀어져서 스타일 추가함*/
+	</style>
+</head>
+
+<body>
+	<div id="wrap">
+		<!-- header s -->
+		<div id="header">
+			<h1>효성 웹 기반 업무시스템 웹 표준화(2차) - PC관리시스템</h1>
+			<ul class="gnb">
+				<li><a href="index.html">개요</a></li>
+				<li><a href="structure.html">디렉토리 구조</a></li>
+				<li><a href="guide.html">요소 마크업</a></li>
+				<li><a href="object.html">자주 사용하는 오브젝트</a></li>
+				<li><a href="list.html">퍼블리싱 리스트</a></li>
+			</ul>
+		</div>
+		<!--// header e -->
+
+		<!-- container s -->
+		<div id="container">
+			<h2 class="h2_tit">마크업 가이드</h2>
+			<div class="conbox">
+				<ul>
+					<li>공통요소에 해당되는 소스를 사용할 수 있습니다.</li>
+				</ul>
+			</div>
+			<!-- CONTENT -->
+			<div class="contents" id="contents">
+				<div class="g_menu">
+					<ul>
+						<li class="on">TITLE</li>
+						<li>FORM</li>
+						<li>BUTTON</li>
+						<li>TABLE</li>
+						<li>PAGING</li>
+						<li>ETC</li>
+					</ul>
+				</div>
+
+				<div class="g_section">
+					<div class="con" style="display:block">
+						<div class="g_title">로케이션 타입</div>
+						<ul class="g_guide">
+							<li>문서마다 적용되어 있는 페이지에 대한 경로와 버튼을 나타낸다.</li>
+						</ul>
+						<div class="g_html">
+<div class="location">
+	<ul>
+		<li class="first"><h2>대분류 H2</h2></li>
+		<li><h3>소분류 H3</h3></li>
+	</ul>
+	<div class="btn_box">
+		<a href="#n" class="btn_gold">button english</a>
+		<a href="#n" class="btn_darkblue">button</a>
+		<a href="#n" class="btn_gray">버튼</a>
+		<a href="#n" class="btn_black">버튼</a>
+		<a href="#n" class="btn_white">버튼</a>
+	</div>
+</div>
+						</div>
+						<a href="#n" class="source">소스보기</a>
+						<hr />
+						<div class="g_title">팝업 타이틀</div>
+						<ul class="g_guide">
+							<li>팝업에 사용되는 타이틀 태그</li>
+							<li></li>
+						</ul>
+						<div class="g_html">
+<div class="pop_header">
+	<h1>사원 조회</h1>
+</div>
+<button type="button" class="btn_pop_close" onclick="window.close();">닫기</button>
+						</div>
+						<a href="#n" class="source">소스보기</a>
+					</div>
+				</div>
+
+					<!--// .con -->
+
+					<!-- FORM -->
+					<div class="con">
+						<div class="g_title">체크박스</div>
+						<ul class="g_guide">
+							<li>checkbox는 숨김(display:none)처리가 되며 스타일시트를 이용하여 화면에 보여지게 됩니다.</li>
+							<li>본 기능은 checkbox의 <strong>id값과 label의 for값이 일치</strong>되어야 정상작동 합니다.</li>
+						</ul>
+						<div class="g_html">
+<input type="checkbox" id="chk01" name="chk"><label for="chk01">체크1</label>
+<input type="checkbox" id="chk02" name="chk"><label for="chk02">체크2</label>
+
+<!-- 체크박스 라벨 텍스트 숨길경우 -->
+<label for="chk03" class="blind">체크박스 라벨 텍스트 숨길경우</label><input type="checkbox" id="chk03" name="chk">
+						</div>
+						<a href="#n" class="source">소스보기</a>
+						<hr />
+
+						<div class="g_title">라디오</div>
+						<ul class="g_guide">
+							<li>radio는 숨김(display:none)처리가 되며 스타일시트를 이용하여 화면에 보여지게 됩니다.</li>
+							<li>본 기능은 radio의 <strong>id값과 label의 for값이 일치</strong>되어야 정상작동 합니다.</li>
+						</ul>
+						<div class="g_html">
+<input type="radio" id="rdo01" name="rdo"><label for="rdo01">라디오1</label>
+<input type="radio" id="rdo02" name="rdo"><label for="rdo02">라디오2</label>
+
+<!-- 라디오버튼 라벨 텍스트 숨길경우 -->
+<label for="rdo03" class="blind">라디오버튼 라벨 텍스트 숨길경우</label><input type="radio" id="rdo03" name="rdo">
+						</div>
+						<a href="#n" class="source">소스보기</a>
+						<hr />
+
+						<div class="g_title">텍스트박스</div>
+						<ul class="g_guide">
+							<li>기본 클래스명은 "input_txt" 입니다.</li>
+						</ul>
+						<div class="g_html">
+<input type="text" class="input_txt" title="가이드 텍스트">
+						</div>
+						<a href="#n" class="source">소스보기</a>
+						<hr />
+
+						<div class="g_title">패스워드박스</div>
+						<ul class="g_guide">
+							<li>텍스트박스의 스타일시트를 함께 사용한다.</li>
+						</ul>
+						<div class="g_html">
+<input type="password" class="input_txt" title="가이드 텍스트">
+						</div>
+						<a href="#n" class="source">소스보기</a>
+						<hr />
+
+						<div class="g_title">TEXTAREA</div>
+						<ul class="g_guide">
+							<li>기본 클래스명은 "textarea" 입니다.</li>
+							<li>width:100%; height:200px; padding:5px; border:1px solid #ddd; box-sizing:border-box; resize:none;</li>
+							<li>사이즈 조절이나 기타 항목이 조절 시 이중클래스를 이용하시기 바랍니다.</li>
+						</ul>
+						<div class="g_html">
+<textarea cols="50" rows="10" class="textarea" title="1,000자 이내로 작성해 주세요.">1,000자 이내로 작성해 주세요.</textarea>
+						</div>
+						<a href="#n" class="source">소스보기</a>
+						<hr />
+
+						<div class="g_title">셀렉트박스</div>
+						<ul class="g_guide">
+							<li>기본 클래스명은 "select" 입니다.</li>
+							<li>height:24px; vertical-align:middle; border:1px solid #ddd; box-sizing:border-box;</li>
+							<li>사이즈 조절이나 기타 항목이 조절 시 이중클래스를 이용하시기 바랍니다.</li>
+						</ul>
+						<div class="g_html">
+<select class="select">
+	<option>옵션1</option>
+	<option>옵션2</option>
+</select>
+						</div>
+						<a href="#n" class="source">소스보기</a>
+						<hr />
+
+						<div class="g_title">사용잠금(disabled 처리)</div>
+						<ul class="g_guide">
+							<li>잠금처리는 태그 내에 disabled="disabled"를 삽입합니다.</li>
+						</ul>
+						<div class="g_html">
+<input type="text" class="input_txt" disabled="disabled">
+<select class="select" disabled="disabled">
+	<option>옵션1</option>
+	<option>옵션2</option>
+</select>
+<textarea rows="10" cols="50" class="textarea" disabled="disabled"></textarea>
+						</div>
+						<a href="#n" class="source">소스보기</a>
+					</div>
+					<!--// .con -->
+
+					<!-- BUTTON -->
+					<div class="con">
+						<div class="g_title">기본 버튼</div>
+						<ul class="g_guide">
+							<li>버튼 색상기준으로 사용가능합니다.</li>
+						</ul>
+						<div class="g_html">
+<a href="#n" class="btn_gold">버튼</a>
+<a href="#n" class="btn_darkblue">버튼</a>
+<a href="#n" class="btn_gray">버튼</a>
+<a href="#n" class="btn_black">버튼</a>
+<a href="#n" class="btn_white">버튼</a>
+						</div>
+						<a href="#n" class="source">소스보기</a>
+						<hr />
+
+					</div>
+					<!--// .con -->
+
+					<!-- TABLE -->
+					<div class="con">
+						<div class="g_title">기본형</div>
+						<ul class="g_guide">
+							<li>테이블의 기본 형태 입니다.</li>
+							<li>텍스트 정렬은 <strong>'algL:좌측', 'algC:중앙','algR:우측'</strong> 입니다.</li>
+							<li>TD 한줄에 대한 텍스트 정렬값을 일괄 변경하려면 &lt;tr&gt;에 클래스를 삽입하여 줍니다.(예:tr_algL,tr_algC,tr_algR)</li>
+						</ul>
+						<div class="g_html">
+<div class="tbl">
+	<table>
+		<caption>테이블 기본형 사용안내</caption>
+		<colgroup>
+			<col style="width:20%">
+			<col style="width:20%">
+			<col style="width:20%">
+			<col style="width:20%">
+			<col style="width:20%">
+		</colgroup>
+		<thead>
+			<tr>
+				<th>셀 헤드 1</th>
+				<th>셀 헤드 2</th>
+				<th>셀 헤드 3</th>
+				<th>셀 헤드 4</th>
+				<th>셀 헤드 5</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td class="algL">내용 삽입 1</td>
+				<td class="algC">내용 삽입 2</td>
+				<td class="algR">내용 삽입 3</td>
+				<td>내용 삽입 4</td>
+				<td>내용 삽입 5</td>
+			</tr>
+			<tr class="tr_algL">
+				<td>내용 삽입 1</td>
+				<td>내용 삽입 2</td>
+				<td>내용 삽입 3</td>
+				<td>내용 삽입 4</td>
+				<td>내용 삽입 5</td>
+			</tr>
+			<tr class="tr_algC">
+				<td>내용 삽입 1</td>
+				<td>내용 삽입 2</td>
+				<td>내용 삽입 3</td>
+				<td>내용 삽입 4</td>
+				<td>내용 삽입 5</td>
+			</tr>
+			<tr class="tr_algR">
+				<td>내용 삽입 1</td>
+				<td>내용 삽입 2</td>
+				<td>내용 삽입 3</td>
+				<td>내용 삽입 4</td>
+				<td>내용 삽입 5</td>
+			</tr>
+		</tbody>
+		<tfoot>
+			<tr>
+				<td>마무리 내용 삽입</td>
+				<td>마무리 내용 삽입</td>
+				<td>마무리 내용 삽입</td>
+				<td>마무리 내용 삽입</td>
+				<td>마무리 내용 삽입</td>
+			</tr>
+		</tfoot>
+	</table>
+</div>
+						</div>
+						<a href="#n" class="source">소스보기</a>
+						<hr />
+
+						<div class="g_title">고정형</div>
+						<ul class="g_guide">
+							<li>셀의 크기를 고정값을 준 경우이며, 셀의 크기에 따라 "..."으로 내용이 표시됩니다.</li>
+						</ul>
+						<div class="g_html">
+<div class="tbl">
+	<table class="tbl_fixed">
+		<caption>테이블 고정형 사용안내</caption>
+		<colgroup>
+			<col style="width:8%;" />
+			<col style="width:8%;" />
+			<col style="width:auto;" />
+			<col style="width:8%;" />
+			<col style="width:8%;" />
+			<col style="width:8%;" />
+			<col style="width:8%;" />
+			<col style="width:8%;" />
+			<col style="width:8%;" />
+			<col style="width:8%;" />
+		</colgroup>
+		<thead>
+			<tr>
+				<th>셀 헤드 1</th>
+				<th>셀 헤드 2</th>
+				<th>셀 헤드 3</th>
+				<th>셀 헤드 4</th>
+				<th>셀 헤드 5</th>
+				<th>셀 헤드 6</th>
+				<th>셀 헤드 7</th>
+				<th>셀 헤드 8</th>
+				<th>셀 헤드 9</th>
+				<th>셀 헤드 10</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>내용 삽입 1</td>
+				<td>내용 삽입 2</td>
+				<td><p class="txt_ellip">긴 내용이 삽입될 수 있습니다. 긴 내용이 삽입될 수 있습니다. 긴 내용이 삽입될 수 있습니다. 긴 내용이 삽입될 수 있습니다. 긴 내용이 삽입될 수 있습니다. 긴 내용이 삽입될 수 있습니다.</p></td>
+				<td>내용 삽입 4</td>
+				<td>내용 삽입 5</td>
+				<td>내용 삽입 6</td>
+				<td>내용 삽입 7</td>
+				<td>내용 삽입 8</td>
+				<td>내용 삽입 9</td>
+				<td>내용 삽입 10</td>
+			</tr>
+			<tr>
+				<td>내용 삽입 1</td>
+				<td>내용 삽입 2</td>
+				<td>내용 삽입 3</td>
+				<td>내용 삽입 4</td>
+				<td>내용 삽입 5</td>
+				<td>내용 삽입 6</td>
+				<td>내용 삽입 7</td>
+				<td>내용 삽입 8</td>
+				<td>내용 삽입 9</td>
+				<td>내용 삽입 10</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+						</div>
+						<a href="#n" class="source">소스보기</a>
+						<hr />
+
+						<div class="g_title">세로형</div>
+						<ul class="g_guide">
+							<li>세로 기준의 테이블로 thead를 갖지 않습니다.</li>
+						</ul>
+						<div class="g_html">
+<div class="tbl">
+	<table>
+		<caption>테이블 세로형 사용안내</caption>
+		<colgroup>
+			<col style="width:15%" />
+			<col style="width:35%" />
+			<col style="width:15%" />
+			<col style="width:35%" />
+		</colgroup>
+		<tbody>
+			<tr>
+				<th scope="row">제목</th>
+				<td>내용 안내</td>
+				<th scope="row">제목</th>
+				<td>내용 삽입 4</td>
+			</tr>
+			<tr>
+				<th scope="row">제목</th>
+				<td colspan="3">내용 안내</td>
+			</tr>
+			<tr>
+				<th scope="row">제목</th>
+				<td>내용 안내</td>
+				<th scope="row">제목</th>
+				<td>내용 삽입 4</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+						</div>
+						<a href="#n" class="source">소스보기</a>
+						<hr />
+
+					</div>
+					<!--// .con -->
+
+					<!-- PAGING -->
+					<div class="con">
+						<div class="g_title">페이징</div>
+						<ul class="g_guide">
+							<li>페이징에 사용되는 기본 스타일 입니다.</li>
+						</ul>
+						<div class="g_html">
+<div class="paginate">
+	<a href="#n" class="pBtn first"><em>맨처음</em></a>
+	<a href="#n" class="pBtn prev"><em>이전페이지</em></a>
+	<strong><span>1</span></strong>
+	<a href="#n"><span>2</span></a>
+	<a href="#n"><span>3</span></a>
+	<a href="#n"><span>4</span></a>
+	<a href="#n"><span>5</span></a>
+	<a href="#n"><span>6</span></a>
+	<a href="#n"><span>7</span></a>
+	<a href="#n"><span>8</span></a>
+	<a href="#n"><span>9</span></a>
+	<a href="#n"><span>10</span></a>
+	<a href="#n" class="pBtn next"><em>다음페이지</em></a>
+	<a href="#n" class="pBtn end"><em>맨마지막</em></a>
+</div>
+						</div>
+						<a href="#n" class="source">소스보기</a>
+					</div>
+					<!--// .con -->
+
+					<!-- ETC -->
+					<div class="con">
+						<div class="g_title">검색 결과 없을 경우</div>
+						<ul class="g_guide">
+							<li></li>
+						</ul>
+						<div class="g_html">
+<div class="nodata">데이터가 존재 하지 않습니다.</div>
+						</div>
+						<a href="#n" class="source">소스보기</a>
+						<hr>
+
+						<div class="g_title">팝업 안내문구+버튼일 경우</div>
+						<ul class="g_guide">
+							<li></li>
+						</ul>
+						<div class="g_html">
+<div class="pop_contents">
+	<div class="notice_box">
+		<span class="ico">선택항목에 체크를 하시고 선택 버턴을 클릭하셔야만 반납자산에 반영 됩니다.</span>
+		<div class="pop_btnbox">
+			<a href="#n" class="btn_gold">선택</a>
+		</div>
+	</div>
+</div>
+						</div>
+						<a href="#n" class="source">소스보기</a>
+						<hr>
+
+<!--
+						<ul class="g_guide">
+							<li>검색 결과 없을 경우</li>
+						</ul>
+						<div class="g_html">
+
+						</div>
+						<a href="#n" class="source">소스보기</a>
+						<hr>
+
+						<ul class="g_guide">
+							<li>검색 결과 없을 경우</li>
+						</ul>
+						<div class="g_html">
+
+						</div>
+						<a href="#n" class="source">소스보기</a>
+						<hr> -->
+
+					</div>
+					<!--// .con -->
+				</div>
+			</div>
+			<!-- //CONTENT -->
+		</div>
+	</div>
+	<script>
+		$(document).ready(function(){
+			$(".gnb > li:nth-child(3) > a").addClass("on");
+
+			$(".g_menu li").bind("click", function(){
+				gId = $(this).index();
+				$(".g_menu li").removeClass("on");
+				$(".g_menu li").eq(gId).addClass("on");
+				$(".contents .con").hide();
+				$(".contents .con").eq(gId).show();
+			});
+
+			//$(".btn").wrapInner("<em></em>");
+
+			$(".source").bind("click",function(){
+				if($(this).text()=="소스보기"){
+					$(this).text("소스닫기");
+					$(this).after("<div class='v_source'></div>");
+					$(this).next().toggle();
+					var a = $(this).prev().clone().html();
+					$(this).next().text(a);
+					$(this).next().wrapInner("<pre></pre>");
+				}else{
+					$(this).text("소스보기");
+					$(".v_source").remove();
+				}
+			});
+		});
+	</script>
+</body>
+</html>

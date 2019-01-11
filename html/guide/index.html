@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta name="robots" content="noindex, nofollow" />
+	<title>사이트가이드 | 효성 웹기반 업무시스템</title>
+	<link rel="stylesheet" href="../common/css/reset.css" />
+	<link rel="stylesheet" href="../common/css/common.css" />
+	<!-- 사이트 별 정의된 스타일시트 삽입 : 시작 -->
+    <link rel="stylesheet" href="com/guide.css" />
+	<!-- 사이트 별 정의된 스타일시트 삽입 : 종료 -->
+	<link rel="stylesheet" href="../common/css/fontawesome.min.css" />
+	<link rel="stylesheet" href="../common/css/jquery-ui.min.css" />
+	<link rel="stylesheet" href="../common/css/etc.css" />
+	<script src="../common/js/jquery-3.3.1.min.js"></script>
+	<script src="../common/js/jquery-ui.min.js"></script>
+</head>
+
+<body>
+	<!--
+	예상 준비기간          2018.12.03~2018.12.14
+	예상 공통요소 제작기간  2018.12.17~2018.12.31
+	예상 파트별 작업기간    2019.01.01~2019.03.08
+	예상 적용문서 검수기간  2019.03.11~2019.03.29 -->
+	<div id="wrap">
+		<!-- header s -->
+		<div id="header">
+			<h1>효성 웹 기반 업무시스템 웹 표준화(2차) - PC관리시스템</h1>
+			<ul class="gnb">
+				<li><a href="index.html">개요</a></li>
+				<li><a href="structure.html">디렉토리 구조</a></li>
+				<li><a href="guide.html">요소 마크업</a></li>
+				<li><a href="object.html">자주 사용하는 오브젝트</a></li>
+				<li><a href="list.html">퍼블리싱 리스트</a></li>
+			</ul>
+		</div>
+		<!--// header e -->
+
+		<!-- container s -->
+		<div id="container">
+			<h2 class="h2_tit">작성자</h2>
+			<div class="conbox">
+				<ul>
+					<li>작성자 : 문연희</li>
+				</ul>
+			</div>
+			<h2 class="h2_tit">요구사항</h2>
+			<div class="conbox">
+				<ul>
+					<li>작업방식은 HTML 페이지를 제작 후 W3C Validator를 체크하여 최종 합격된 파일만 전달합니다.</li>
+					<li>PC웹 표준방식으로 모바일은 최적화되어 있지 않음</li>
+					<li>담당개발자에게 /jsp, /common(css,images,js) 폴더에 해당하는 파일만 전달합니다.</li>
+				</ul>
+			</div>
+			<h2 class="h2_tit">작성 이력</h2>
+			<div id="g_content">
+				<table id="focus" class="mlist">
+					<colgroup>
+						<col style="width:5%" />
+						<col style="width:12%" />
+						<col style="width:15%" />
+						<col style="width:auto" />
+						<col style="width:10%" />
+					</colgroup>
+					<thead>
+						<tr>
+							<th class="first">NUM</th>
+							<th>작성일</th>
+							<th>제목</th>
+							<th>내용</th>
+							<th>비고</th>
+						</tr>
+					</thead>
+					<tbody class="tbl_result"></tbody>
+				</table>
+			</div>
+		</div>
+		<!--// container e -->
+		<div id="footer">
+			Copyright &copy; All Right Reserved
+		</div>
+		<p class="btn_top"><a href="#top"><img src="img/btn_gotop.gif" alt="TOP" /></a></p>
+	</div>
+	<script>
+		$(document).ready(function(){
+			$(".gnb > li:nth-child(1) > a").addClass("on");
+			/*
+				depth1 : 1뎁스 명칭
+				depth2 : 2뎁스 명칭
+				files : 파일명
+				links : 파일의 경로 / 링크 클릭 시 확인 가능
+				process : 진행상태를 나타냄 / ok:완료(w3c 체크까지 완료), ing:진행중, mod:수정
+				dates : 날짜
+				etcs : 기타 의견
+				ends : 구분선 / 'OK'값을 기준으로 체크하며 'OK'값이 존재 시 구현된다.
+			*/
+			var result = [
+				{ dates:"2018.12.12", titles:"가이드 초안작성", cnts:"가이드문서의 구성을 개요, 디렉토리 구조, 요소 마크업, 자주 사용하는 오브젝트, 퍼블리싱 리스트로 구성", etcs:"", ends:"" },
+				{ dates:"2018.12.12", titles:"가이드 디렉토리 구조 작성", cnts:"본 작업에 사용될 디렉토리에 대한 구조를 설명하는 페이지 작성 완료", etcs:"", ends:"" },
+				{ dates:"2018.12.12", titles:"요소 마크업 작성", cnts:"본 작업에 사용될 공통요소에 대한 마크업 샘플 작업 완료", etcs:"", ends:"" },
+				{ dates:"2018.12.27", titles:"카테고리 - 지급관리", cnts:"카테고리 중 '지급관리' 마크업 완료", etcs:"", ends:"" },
+				{ dates:"2018.12.27", titles:"카테고리 - 구매관리", cnts:"카테고리 중 '구매관리' 마크업 완료", etcs:"", ends:"ok" },
+				{ dates:"2019.01.02", titles:"카테고리 - 실사관리", cnts:"카테고리 중 '실사관리' 마크업 완료", etcs:"", ends:"" },
+				{ dates:"2019.01.03", titles:"jsp include", cnts:"html 파일을 jsp파일로 변환작업(카테고리 - 지급관리) http://150.25.7.44/webstd/jsp 폴더에 업로드하여 개발자 확인가능", etcs:"", ends:"" },
+				{ dates:"2019.01.03 ~ 01.04", titles:"카테고리 - 이력관리,폐기관리", cnts:"카테고리 중 '이력관리,폐기관리' 마크업 완료", etcs:"", ends:"" },
+				{ dates:"2019.01.07", titles:"마크업1차 완료", cnts:"마크업 완료, 디자인 수정사항 추후 반영 예정", etcs:"", ends:"" },
+				{ dates:"2019.01.08 ~ 01.11", titles:"html > jsp 파일변환", cnts:"html파일을 jsp파일로 변환작업예정", etcs:"", ends:"" },
+				{ dates:"2019.01.08", titles:"팝업 추가작업", cnts:"사원 조회(EmployeeAll.html),사원별 자산 조회(EmployeeAsset.html),팀명 조회(DeptCode.html),모니터 조회(Monitor.html) 추가작업", etcs:"", ends:"" },
+				{ dates:"2019.01.10", titles:"location 수정", cnts:"h2 타이틀 및 로케이션바 전체수정 /include/location.jsp 추가", etcs:"", ends:"" },
+			];
+			var output = "";
+			var result_tr = result.length;
+			$.each(result,function(index,item){
+				output += "<tr>";
+				output += "<td>"+(index+1)+"</td>";
+				output += "<td>"+item.dates+"</td>";
+				output += "<td>"+item.titles+"</td>";
+				output += "<td class='alL'>"+item.cnts+"</td>";
+
+				if(item.etcs == null){
+					output += "<td></td>";
+				}else{
+					output += "<td>"+item.etcs+"</td>";
+				}
+				output += "</tr>"
+				if(item.ends == "ok"){
+					output += "<tr><td colspan='5' class='borB'></td></tr>"
+				}
+			})
+			$(".tbl_result").html(output);
+		});
+	</script>
+</body>
+</html>

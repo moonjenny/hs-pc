@@ -1,0 +1,259 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta name="robots" content="noindex, nofollow" />
+	<title>신청내역상세(부품) | 신청 내역 조회 | 지급관리 | PC관리 시스템</title>
+	<link rel="stylesheet" href="../common/css/reset.css" />
+	<link rel="stylesheet" href="../common/css/common.css" />
+	<link rel="stylesheet" href="../common/css/jquery-ui.min.css" />
+	<link rel="stylesheet" href="../common/css/etc.css" />
+	<!-- 사이트 별 정의된 스타일시트 삽입 : 시작 -->
+	<link rel="stylesheet" href="../common/css/hs_pc.css" />
+	<!-- 사이트 별 정의된 스타일시트 삽입 : 종료 -->
+	<script src="../common/js/jquery-3.3.1.min.js"></script>
+	<script src="../common/js/jquery-ui.min.js"></script>
+	<script src="../common/js/hs_common.js"></script>
+	<!-- 팝업창 띄우기 -->
+	<script>
+		function openPop(pop,winW,winH,scrollbars) {
+		//min(250, 150) IE7, IE8
+	   var status = "toolbar=no,location=no,directories=no,status=no,menubar=no,resizable=yes,scrollbars="+'yes'+", width="+winW+", height="+winH+",left=0, top=0";
+	   window.open(pop+'.html', 'win', status);
+	}
+	</script>
+
+	<!-- 달력 -->
+	<script>
+		$( function() {
+			$.datepicker.setDefaults( $.datepicker.regional[ "ko" ] );
+			$( "#datepicker" ).datepicker({
+				showOn: "button",
+				buttonText: "시작일 날짜 선택하기"
+			});
+			$( "#datepicker2" ).datepicker({
+				showOn: "button",
+				buttonText: "종료일 날짜 선택하기"
+			});
+		});
+	</script>
+
+</head>
+
+<body>
+	<!-- header -->
+	<header id="header">
+		<div style="height:95px;background:#eee">
+			<h1>header 영역입니다.</h1>
+		</div>
+	</header>
+	<!-- //header -->
+
+	<!-- contents -->
+	<div id="contents" class="contents">
+		<!-- location -->
+		<div class="location">
+			<h2>신청내역상세(부품)</h2>
+			<ul>
+				<li class="home"><a href="#n">Home</a></li>
+				<li><span>신청 내역 조회</span></li>
+				<li><strong>신청내역상세(부품)</strong></li>
+			</ul>
+		</div>
+		<!-- //location -->
+
+		<!-- top_btn -->
+		<div class="top_btnbox">
+			<a href="#n" class="btn_gold">이전화면</a>
+		</div>
+		<!-- //top_btn -->
+
+		<div class="tbl">
+			<table>
+				<caption>신청내역상세(부품) 리스트</caption>
+				<colgroup>
+					<col style="width:100px">
+					<col style="width:120px">
+					<col style="width:80px">
+					<col>
+					<col style="width:140px">
+					<col style="width:240px">
+					<col style="width:120px">
+				</colgroup>
+				<thead>
+					<tr>
+						<th>자산번호</th>
+						<th>자산종류</th>
+						<th>사용자</th>
+						<th>사용자소속</th>
+						<th>신청부품종류</th>
+						<th>신청부품</th>
+						<th>구매번호</th>
+					</tr>
+				</thead>
+				<tbody>
+					<!-- <tr>
+							<td colspan="7"><div class="nodata">데이터가 존재 하지 않습니다.</div></td>
+						</tr> -->
+					<tr>
+						<td class="algC">
+							<div class="input_box">
+								<input type="text" class="input_txt" value="138179">
+								<a href="#n" class="btn_openpop" onclick="openPop('RMDI105P',800,534);return false;" title="자산번호 조회 팝업열기"><span class="blind">자산번호 조회 팝업열기</span></a>
+							</div>
+						</td>
+						<td>PC 본체</td>
+						<td>김상일</td>
+						<td>효성중공업(주) 중공업PG 전력PU 전장검사팀</td>
+						<td>
+							<label for="selPart1" class="blind">신청부품종류</label>
+							<select id="selPart1" name="selPart1">
+								<option>CPU</option>
+								<option>RAM</option>
+								<option>HDD</option>
+								<option>VGA</option>
+								<option>LANCARD</option>
+								<option>SOUND</option>
+								<option>ODD</option>
+								<option>운영체제</option>
+								<option>스피커</option>
+								<option>헤드셋</option>
+								<option>화상카메라</option>
+								<option>소프트웨어</option>
+								<option>배터리</option>
+								<option>마우스</option>
+								<option>키패드</option>
+								<option>메모리스틱</option>
+								<option>가방</option>
+								<option>키보드</option>
+								<option>무선LAN</option>
+								<option>LCD크기</option>
+								<option>FDD</option>
+								<option>마이크</option>
+								<option>외장형Case</option>
+								<option>외장형HDD</option>
+								<option>공유기</option>
+								<option>젠더</option>
+								<option>어뎁터</option>
+								<option>도킹스테이션</option>
+								<option>USB HUB</option>
+								<option>카드리더기</option>
+								<option>Micro SD</option>
+								<option>SSD</option>
+							</select>
+						</td>
+						<td>
+							<label for="selOption1" class="blind">옵션</label>
+							<select id="selOption1" name="selOption1">
+								<option>옵션명</option>
+							</select>
+						</td>
+						<td>
+							<div class="input_box">
+								<input type="text" class="input_txt" value="72375,2">
+								<a href="#n" class="btn_openpop" onclick="openPop('PMPR107P',700,534);return false;" title="구매번호 팝업열기"><span class="blind">구매번호 팝업열기</span></a>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td class="algC">
+							<div class="input_box">
+								<input type="text" class="input_txt">
+								<a href="#n" class="btn_openpop" onclick="openPop('RMDI105P',800,534);return false;" title="자산번호 조회 팝업열기"><span class="blind">자산번호 조회 팝업열기</span></a>
+							</div>
+						</td>
+						<td>노트북PC</td>
+						<td>한상열</td>
+						<td>효성중공업(주) 중공업PG 풍력사업단 풍력팀_본사</td>
+						<td>
+							<label for="selPart2" class="blind">신청부품종류</label>
+							<select id="selPart2" name="selPart2">
+								<option>CPU</option>
+								<option>RAM</option>
+								<option>HDD</option>
+								<option>VGA</option>
+								<option>LANCARD</option>
+								<option>SOUND</option>
+								<option>ODD</option>
+								<option>운영체제</option>
+								<option>스피커</option>
+								<option>헤드셋</option>
+								<option>화상카메라</option>
+								<option>소프트웨어</option>
+								<option>배터리</option>
+								<option>마우스</option>
+								<option>키패드</option>
+								<option>메모리스틱</option>
+								<option>가방</option>
+								<option>키보드</option>
+								<option>무선LAN</option>
+								<option>LCD크기</option>
+								<option>FDD</option>
+								<option>마이크</option>
+								<option>외장형Case</option>
+								<option>외장형HDD</option>
+								<option>공유기</option>
+								<option>젠더</option>
+								<option>어뎁터</option>
+								<option>도킹스테이션</option>
+								<option>USB HUB</option>
+								<option>카드리더기</option>
+								<option>Micro SD</option>
+								<option>SSD</option>
+							</select>
+						</td>
+						<td>
+							<label for="selOption2" class="blind">옵션</label>
+							<select id="selOption2" name="selOption2">
+								<option>옵션명</option>
+							</select>
+						</td>
+						<td>
+							<div class="input_box">
+								<input type="text" class="input_txt">
+								<a href="#n" class="btn_openpop" onclick="openPop('PMPR107P',700,400);return false;" title="구매번호 팝업열기"><span class="blind">구매번호 팝업열기</span></a>
+							</div>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+
+		<div class="tbl">
+			<table>
+				<caption>설치회수 요청사항</caption>
+				<colgroup>
+					<col style="width:120px;">
+					<col>
+				</colgroup>
+				<tbody>
+					<tr>
+						<th>설치회수<br>요청사항</th>
+						<td>
+							<textarea rows="6" cols="120" placeholder="이곳에 설치회수 요청사항을 입력 하십시오."></textarea>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+	<!-- //contents -->
+
+	<!-- footer -->
+	<footer id="footer">
+		<div class="footer_con">
+			<div class="foot_ci">
+				<span class="blind">HYOSUNG GlobalExcellence</span>
+			</div>
+			<div class="foot_copy">
+				<span class="copyright">COPYRIGHT &copy; 2019 HYOSUNG. ALL RIGHTS RESERVED.</span>
+			</div>
+		</div>
+	</footer>
+	<!-- //footer -->
+</body>
+
+</html>
