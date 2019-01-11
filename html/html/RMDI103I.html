@@ -31,7 +31,11 @@
 			$.datepicker.setDefaults( $.datepicker.regional[ "ko" ] );
 			$( "#datepicker" ).datepicker({
 				showOn: "button",
-				buttonText: "날짜 선택하기"
+				buttonText: "손망실 일자 선택하기"
+			});
+			$( "#datepicker2" ).datepicker({
+				showOn: "button",
+				buttonText: "손망실 일자 선택하기"
 			});
 		});
 	</script>
@@ -172,6 +176,119 @@
 				</tbody>
 			</table>
 		</div>
+
+		<!-- 20190111 테이블 추가 -->
+		<div class="tbl t_apply">
+			<table>
+				<caption>자산번호,자산명, 손망실일자,사유 입력 리스트</caption>
+				<colgroup>
+					<col style="width:40px;">
+					<col style="width:120px;">
+					<col>
+					<col style="width:120px;">
+					<col>
+				</colgroup>
+				<tbody>
+					<tr>
+						<td rowspan="4" class="algC">
+							<input type="checkbox">
+						</td>
+						<th>자산번호</th>
+						<td rowspan="4">
+							<p>소유구분 : 개인사용</p>
+							<p>모델명 : 레노버ThinkPad T470s</p>
+							<p>
+								<input type="checkbox" id="chk01"> <label for="chk01">CPU : Intel i5-7200u 2.5 GHz</label>
+							</p>
+							<p>
+								<input type="checkbox" id="chk02"> <label for="chk02">RAM : 메모리 8 GB</label>
+							</p>
+							<p>
+								<input type="checkbox" id="chk03"> <label for="chk03">HDD : SSD 256 GB</label>
+							</p>
+							<p>
+								<input type="checkbox" id="chk04"> <label for="chk04">VGA : 일반용 </label>
+							</p>
+							<p>
+								<input type="checkbox" id="chk05"> <label for="chk05">LANCARD : 있음</label>
+							</p>
+							<p>
+								<input type="checkbox" id="chk06"> <label for="chk06">SOUND : 없음 </label>
+							</p>
+							<p>
+								<input type="checkbox" id="chk07"> <label for="chk07">운영체제 : MS Windows 10 </label>
+							</p>
+							<p>
+								<input type="checkbox" id="chk08"> <label for="chk08">마우스 : USB마우스 </label>
+							</p>
+							<p>
+								<input type="checkbox" id="chk09"> <label for="chk09">가방 : 있음 </label>
+							</p>
+							<p>
+								<input type="checkbox" id="chk10"> <label for="chk10">LCD크기 : 14.1 인치</label>
+							</p>
+						</td>
+						<th>손망실일자</th>
+						<td>
+							<input type="text" class="input_txt" id="datepicker">
+						</td>
+					</tr>
+					<tr>
+						<td>124687</td>
+						<th rowspan="3">사유</th>
+						<td rowspan="3">
+							<textarea rows="4" cols="130"></textarea>
+						</td>
+					</tr>
+					<tr>
+						<th>자산명</th>
+					</tr>
+					<tr>
+						<td>노트북PC</td>
+					</tr>
+					<tr>
+						<td rowspan="4" class="algC">
+							<input type="checkbox">
+						</td>
+						<th>자산번호</th>
+						<td rowspan="4">
+							<p>소유구분 : 개인사용</p>
+							<p>모델명 : HPOfficejet Pro 8210</p>
+							<p>
+								<input type="checkbox" id="chk11"> <label for="chk11">NetWork Card : 없음 </label>
+							</p>
+							<p>
+								<input type="checkbox" id="chk12"> <label for="chk12">색상 : 칼라 </label>
+							</p>
+							<p>
+								<input type="checkbox" id="chk13"> <label for="chk13">RAM : 256 MB</label>
+							</p>
+							<p>
+								<input type="checkbox" id="chk14"> <label for="chk14">PPM : 34 매</label>
+							</p>
+						</td>
+						<th>손망실일자</th>
+						<td>
+							<input type="text" class="input_txt" id="datepicker2">
+						</td>
+					</tr>
+					<tr>
+						<td>124687</td>
+						<th rowspan="3">사유</th>
+						<td rowspan="3">
+							<textarea rows="4" cols="130"></textarea>
+						</td>
+					</tr>
+					<tr>
+						<th>자산명</th>
+					</tr>
+					<tr>
+						<td>INKJET 프린터</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<!-- //20190111 테이블 추가 -->
 
 		<!-- 손망실 상세사유,신청부서 결재자 의견, 총괄 담당자 의견, 총괄 책임자 의견 S -->
 		<div class="tbl t_apply">
