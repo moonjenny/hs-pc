@@ -176,8 +176,8 @@
 .pop_info ul li{float:left;font-size:14px;}
 .pop_info ul li span{display:inline-block;padding:5px 15px;color:#666;}
 .pop_info ul li .tit{color:#fff;font-weight:400;background:#a3785f;}
-.pop_contents .search_box li .tit{width:55px;padding:0 0 0 5px}
-.pop_contents .search_box li .sel{padding:0 30px 0 60px}
+.pop_contents .search_box li .tit{width:65px;padding:0 0 0 5px}
+.pop_contents .search_box li .sel{padding:0 10px 0 70px}
 
 
 /* datepicker */
