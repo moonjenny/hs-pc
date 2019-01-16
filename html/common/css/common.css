@@ -41,7 +41,7 @@
 .gnb .sub_menu ul.depth02 li a:hover{color:#1761b8;font-family:'NotoSansB'text-decoration:underline;}
 
 /* contents */
-.contents{position:relative;padding:100px 20px 40px;}
+.contents{position:relative;padding:100px 20px 40px;min-width:1000px;}
 
 /* Footer */
 #footer {}

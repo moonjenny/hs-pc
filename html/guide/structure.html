@@ -38,125 +38,42 @@
 			<h2 class="h2_tit">기본정의</h2>
 			<div class="conbox">
 				<ul>
-					<li>기본 100%를 활용하는 풀-브라우징으로 적용하며, 최소해상도는 1024px, 컨텐츠의 최대 해상도는 1280px로 구현 : width:100% / min-width:1000px 기준임</li>
-					<li>기준 브라우저는 IE9. 크로스브라우징의 범위 : IE9(화면유지) ~ Edge, 구글크롬, 파이어폭스, 사파리</li>
-					<li>Html Validator 통과를 원칙으로 함</li>
-					<li>기본 주석 및 개발 전달 주석 필히 기재</li>
-					<li>[주의]공동작업임으로 서버에서 파일이 덮여쓰여지지 않도록 주의할것. 반드시 로컬에 백업할것</li>
+					<li>폴더 구조는 AS-IS 기준으로 정의함</li>
+					<li>퍼블리싱 공통요소는 /common/ 폴더에 포함되어 있음</li>
+					<li>/jsp/ 실제 개발관련된 .jsp 파일이 있습니다</li>
 				</ul>
 			</div>
 			<h2 class="h2_tit">디렉토리 구조</h2>
 			<div id="g_content">
 				<div class="div_str">
 					<ul class="">
-						<li><span>root</span>
+						<li><span><strong>webstd</strong></span>
 							<ul>
-								<li><span>common</span>
+								<li><span><strong>html</strong></span>
 									<ul>
-										<li><span>css</span>
+										<li><span>common</span>
 											<ul>
-												<li>
-													<span>reset.css</span>
-													<div>웹폰트 선언/기본태그 CSS 정의</div>
-												</li>
-												<li>
-													<span>common.css</span>
-													<div>공통 요소/레이아웃</div>
-												</li>
-												<li>
-													<span>hs_pc.css</span>
-													<div>PC관리시스템만 적용되는 스타일시트</div>
-												</li>
-												<li>
-													<span>etc.css</span>
-													<div>기타 스타일시트</div>
-												</li>
-												<li>
-													<span>jquery-ui.min.css</span>
-													<div>Jquery UI 라이브러리용 CSS</div>
-												</li>
-												<!-- <li>
-													<span>fontawesome.min.css</span>
-													<div>Font Awesome 5 FREE CSS</div>
-												</li>
-												<li>
-													<span>all.min.css</span>
-													<div>Font Awesome 5 FREE CSS</div>
-												</li>
-												<li>
-													<span>brands.min.css</span>
-													<div>Font Awesome 5 FREE CSS</div>
-												</li>
-												<li>
-													<span>regular.min.css</span>
-													<div>Font Awesome 5 FREE CSS</div>
-												</li>
-												<li>
-													<span>solid.min.css</span>
-													<div>Font Awesome 5 FREE CSS</div>
-												</li>
-												<li>
-													<span>svg-with-js.min.css</span>
-													<div>Font Awesome 5 FREE CSS</div>
-												</li>
-												<li>
-													<span>v4-shims.min.css</span>
-													<div>Font Awesome 5 FREE CSS</div>
-												</li> -->
+												<li><span>css</span><div>css 스타일</div></li>
+												<li><span>fonts</span><div>웹폰트</div></li>
+												<li><span>images</span><div>이미지</div></li>
+												<li><span>js</span><div>스크립트</div></li>
 											</ul>
 										</li>
-										<li><span>fonts</span>
-											<ul>
-												<li>
-													<span>NotoSans-Thin</span>
-													<div>font-family: 'NotoSansT'</div>
-												</li>
-												<li>
-													<span>NotoSans-Light</span>
-													<div>font-family: 'NotoSansL'</div>
-												</li>
-												<li>
-													<span>NotoSans-Regular</span>
-													<div>font-family: 'NotoSansR'</div>
-												</li>
-												<li>
-													<span>NotoSans-Medium</span>
-													<div>font-family: 'NotoSansM'</div>
-												</li>
-												<li>
-													<span>NotoSans-Bold</span>
-													<div>font-family: 'NotoSansB'</div>
-												</li>
-											</ul>
-										</li>
-										<li><span>images</span>
-											<div>해당작업에 사용되는 이미지를 통합해서 관리</div>
-										</li>
-										<li><span>js</span>
-											<ul>
-												<li>
-													<span>jquery-3.3.1.min.js</span>
-													<div>Jquery Library</div>
-												</li>
-												<li>
-													<span>jquery-ui.min.js</span>
-													<div>Jquery UI Library</div>
-												</li>
-												<li>
-													<span>hs_common.js</span>
-													<div>PC관리 시스템 스크립트 파일</div>
-												</li>
-											</ul>
-										</li>
-										<!-- <li>
-											<span>webfonts</span>
-											<div>Font Awesome에 사용되는 웹폰트 / 삭제 시 아이콘 사용 불가능</div>
-										</li> -->
+										<li><span>html</span><div>퍼블리싱 html 파일</div></li>
+										<li><span>guide</span><div>퍼블리싱 가이드 폴더</div></li>
 									</ul>
 								</li>
-								<li><span>html</span></li>
-								<li><span>webapp</span>
+								<li><span><strong>jsp</strong></span>
 									<ul>
+										<li><span>common</span>
+											<ul>
+												<li><span>css</span><div>css 스타일</div></li>
+												<li><span>fonts</span><div>웹폰트</div></li>
+												<li><span>images</span><div>이미지</div></li>
+												<li><span>js</span><div>스크립트</div></li>
+												<li><span>DeptCode.jsp<br>EmployeeAll.jsp<br>EmployeeAsset1.jsp<br>Monitor.jsp</span><div>공통 팝업 .jsp</div></li>
+											</ul>
+										</li>
 										<li><span>include</span>
 											<ul>
 												<li><span>header.jsp<br>gnb.jsp<br>footer.jsp<br>location.jsp</span><div>doctype,meta태그<br>헤더 GNB 영역<br>푸터<br>h2 타이틀,로케이션바</div></li>
