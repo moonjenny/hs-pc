@@ -1,5 +1,5 @@
 @charset "utf-8";
-body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,select,textarea,p,blockquote,th,td,legend,button{font-size:12px;/* font-family:Dotum,'돋움',Helvetica,"Apple SD Gothic Neo",sans-serif; */}
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,select,textarea,p,blockquote,th,td,legend,button{font-size:12px;font-family:Dotum,'돋움',Helvetica,"Apple SD Gothic Neo",sans-serif;}
 #wrap {min-width:1024px; overflow:hidden;}
 /* clear */
 #header:after, #header ul.gnb:after {content:'.'; display:block; height:0px; clear:both; visibility:hidden;}

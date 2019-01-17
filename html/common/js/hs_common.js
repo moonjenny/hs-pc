@@ -1,34 +1,16 @@
+
 /* gnb */
-$(document).ready(function(){
-	var gnb = $(".gnb"),
-			dep = $("ul.depth01", gnb),
-			nav = $("> li", dep),
-			sub = ".sub_menu",
-			timer;
-
-	nav.mouseover(function(){
-		var self = $(this),
-				h = self.height() + self.find(sub).height();
-		clearTimeout(timer);
-
-		nav.removeClass("hover");
-		self.addClass("hover");
-		$(sub).hide();
-		$(sub, self).show().css({"z-index":"100000"});
-
-		gnb.find(".bg").show();
-		dep.unbind("mouseout");
-	});
-	nav.mouseleave(function(){
-		nav.removeClass("hover");
-		$(sub).hide();
-		gnb.find(".bg").hide();
-	});
-});
-
-/* gnb type2 */
 $(function(){
-	var gnb
+	gnb = $("nav");
+	gnbOpen = $("nav .gnb_open");
+	gnbOpenHei = $("nav .gnb_open ul").height();
+
+	gnb.mouseover(function(){
+		gnbOpen.stop().slideDown(400);
+	});
+	gnb.mouseleave(function(){
+		gnbOpen.stop().slideUp(300);
+	});
 });
 
 /* Korean initialisation for the jQuery calendar extension. */
