@@ -4,7 +4,6 @@
 	String page_title = "구매재고조회";
 %>
 
-<body>
 	<div id="pop_wrap">
 		<div class="pop_header">
 			<h1><%=page_title%></h1>

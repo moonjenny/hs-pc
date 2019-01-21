@@ -470,13 +470,5 @@
 	</div>
 	<!-- //contents -->
 
-	<!-- footer -->
-	<footer id="footer">
-		<div class="footer_con">
-			<span class="copyright">COPYRIGHT &copy; 2019 HYOSUNG.ALL RIGHTS RESERVED.</span>
-		</div>
-	</footer>
-	<!-- //footer -->
-</body>
 
-</html>
+<%@include file="/include/footer.jsp"%>
