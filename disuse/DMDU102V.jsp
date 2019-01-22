@@ -1,10 +1,17 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<%@include file="/include/header.jsp"%>
-<%@include file="/include/gnb.jsp"%>
 <%
 	String page_category = "폐기관리";
 	String page_name = "폐기대상조회및정리";
+	String gn_btn1 = "";
+	String gn_btn2 = "";
+	String gn_btn3 = "";
+	String gn_btn4 = "";
+	String gn_btn5 = "on";
+	String gn_btn6 = "";
+	String gn_btn7 = "";
 %>
+<%@include file="/include/header.jsp"%>
+<%@include file="/include/gnb.jsp"%>
 	<!-- 달력 -->
 	<script>
 		$( function() {
@@ -65,15 +72,23 @@
 		</div>
 		<!-- //search_btn -->
 
-		<div class="pop_info">
-			<ul>
-				<li>
-					<span class="tit">노트북PC</span>
-					<span class="txt">1</span>
-				</li>
-			</ul>
-		</div>
 
+		<div class="tbl">
+			<table>
+				<caption>부품 갯수</caption>
+				<colgroup>
+					<col style="width:170px">
+					<col>
+				</colgroup>
+				<tbody>
+					<tr>
+						<th>노트북PC</th>
+						<td>1</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		
 		<!-- search_result -->
 		<div class="search_result">
 			<div class="tbl scrollx">

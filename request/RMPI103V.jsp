@@ -1,10 +1,18 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<%@include file="/include/header.jsp"%>
-<%@include file="/include/gnb.jsp"%>
 <%
 	String page_category = "IP신청관리";
 	String page_name = "IP신청";
+	String gn_btn1 = "";
+	String gn_btn2 = "";
+	String gn_btn3 = "";
+	String gn_btn4 = "";
+	String gn_btn5 = "";
+	String gn_btn6 = "";
+	String gn_btn7 = "on";
 %>
+<%@include file="/include/header.jsp"%>
+<%@include file="/include/gnb.jsp"%>
+
 	<!-- 팝업창 띄우기 -->
 	<script>
 		function openPop(pop,winW,winH,scrollbars) {

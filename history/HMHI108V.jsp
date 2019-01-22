@@ -1,10 +1,17 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<%@include file="/include/header.jsp"%>
-<%@include file="/include/gnb.jsp"%>
 <%
 	String page_category = "이력관리";
 	String page_name = "지역별자산별조회";
+	String gn_btn1 = "";
+	String gn_btn2 = "";
+	String gn_btn3 = "";
+	String gn_btn4 = "on";
+	String gn_btn5 = "";
+	String gn_btn6 = "";
+	String gn_btn7 = "";
 %>
+<%@include file="/include/header.jsp"%>
+<%@include file="/include/gnb.jsp"%>
 
 	<!-- contents -->
 	<div id="contents" class="contents">

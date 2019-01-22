@@ -1,10 +1,17 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<%@include file="/include/header.jsp"%>
-<%@include file="/include/gnb.jsp"%>
 <%
 	String page_category = "신청 내역 조회";
 	String page_name = "설치/회수 부품 내역입력";
+	String gn_btn1 = "on";
+	String gn_btn2 = "";
+	String gn_btn3 = "";
+	String gn_btn4 = "";
+	String gn_btn5 = "";
+	String gn_btn6 = "";
+	String gn_btn7 = "";
 %>
+<%@include file="/include/header.jsp"%>
+<%@include file="/include/gnb.jsp"%>
 
 	<!-- contents -->
 	<div id="contents" class="contents">
@@ -83,8 +90,10 @@
                             <input type="checkbox" id="chkReturn2">
                         </td>
                         <td class="algC">&nbsp;</td>
-                        <td>&nbsp;</td>
-                        <td>&nbsp;</td>
+                        <!-- 20190122 라인 없는 인풋텍스트 추가 -->
+                        <td><input type="text" class="input_txt"></td>
+                        <td><input type="text" class="input_txt noline"></td>
+                        <!-- 20190122 라인 없는 인풋텍스트 추가 -->
                         <td>&nbsp;</td>
                         <td>&nbsp;</td>
                         <td>&nbsp;</td>

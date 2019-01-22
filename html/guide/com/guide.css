@@ -5,8 +5,8 @@ body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,select,text
 #header:after, #header ul.gnb:after {content:'.'; display:block; height:0px; clear:both; visibility:hidden;}
 
 /* header */
-#header{position:relative; min-width:950px; width:100%; background:#fff;height:auto;}
-#header h1 {padding:25px 0 25px 25px; font-family:Verdana, Geneva, sans-serif; color:#a3785f;font-size:20px;}
+#header{position:relative; min-width:950px; width:100%; background:#fff;height:auto;box-shadow:none;}
+#header h1 {padding:25px 0 25px 25px; font-family:Verdana, Geneva, sans-serif; color:#a3785f;font-size:20px;height:auto;}
 #header ul.gnb {background:#a3785f; padding:0 0 0 30px; font-size:18px; font-weight:bold;height:auto;}
 #header ul.gnb li {float:left; font-family:Verdana, Geneva, sans-serif;}
 #header ul.gnb li a {display:inline-block; padding:0 20px; color:#fff; border:1px #a3785f solid; border-bottom:none; line-height:35px;}
