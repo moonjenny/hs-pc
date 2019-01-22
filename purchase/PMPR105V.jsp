@@ -89,7 +89,7 @@
 				<a href="#n" class="btn_gold">조회</a>
 			</div>
 			<div class="pop_result">
-				<div class="tbl scrollx" style="height:300px"> <!-- 테이블 강제 스크롤 생성 .scrollx, .scrolly -->
+				<div class="tbl scrollx" style="height:300px"> <!-- 테이블 강제 스크롤 생성 .scrollx -->
 					<table style="width:1700px">
 						<caption>구매재고조회 결과</caption>
 						<colgroup>
