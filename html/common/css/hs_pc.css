@@ -49,3 +49,6 @@
 .category_code .title h4{font-size:15px;line-height:32px;}
 .category_code .title .cate_btn{position:absolute;right:0;top:0;}
 .category_code li .tbl{margin:10px 0 0;}
+
+/* crownix-viewer */
+#.crownix-viewer,.crownix-viewer{min-height:800px;}
