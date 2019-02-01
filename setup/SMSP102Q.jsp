@@ -45,7 +45,7 @@
 
 		<!-- search_btn -->
 		<div class="search_btn">
-			<a href="#n" class="btn_gold">작성</a>
+			<a href="./SMSP101I.jsp" class="btn_gold">작성</a>
 			<a href="#n" class="btn_gold">조회</a>
 		</div>
 		<!-- //search_btn -->

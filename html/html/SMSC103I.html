@@ -16,6 +16,28 @@
 	<script src="../common/js/jquery-3.3.1.min.js"></script>
 	<script src="../common/js/jquery-ui.min.js"></script>
 	<script src="../common/js/hs_common.js"></script>
+
+	<!-- 20190201 테이블 추가 -->
+	<script>
+		$(document).ready(function(){
+			//table tr 추가
+			$(".btn_contextmenu .btn_add").click(function(){
+				$(this).parent().parent().find('tbody:last').append(
+					'<tr>' +
+					'	<td class="algC open_menu"> &nbsp; </td>' +
+					'	<td> </td>' +
+					'	<td> </td>' +
+					'	<td> </td>' +
+					'</tr>'
+				);
+			});
+			//table tr 삭제
+			$(".btn_contextmenu .btn_del").click(function(){
+				console.log("btn_del");
+				$(this).parent().parent().find('tbody tr:last').remove();
+			});
+		});
+	</script>
 </head>
 
 <body>
@@ -166,7 +188,7 @@
 					</thead>
 					<tbody>
 						<tr>
-							<td class="algC">0000002549</td>
+							<td class="algC open_menu">0000002549</td>
 							<td>Adobe</td>
 							<td>Photoshop</td>
 							<td>
@@ -178,7 +200,7 @@
 							</td>
 						</tr>
 						<tr>
-							<td class="algC">0000002549</td>
+							<td class="algC open_menu">0000002549</td>
 							<td>Adobe</td>
 							<td>Illustrator CS Maccintosh 10.0</td>
 							<td>
@@ -190,7 +212,7 @@
 							</td>
 						</tr>
 						<tr>
-							<td class="algC">&nbsp;</td>
+							<td class="algC open_menu">&nbsp;</td>
 							<td>&nbsp;</td>
 							<td>&nbsp;</td>
 							<td>
@@ -203,6 +225,12 @@
 						</tr>
 					</tbody>
 				</table>
+				<!-- 20190201 버튼 추가 -->
+				<div class="btn_contextmenu">
+					<button class="btn_add">추가</button>
+					<button class="btn_del">삭제</button>
+				</div>
+				<!-- //20190201 버튼 추가 -->
 			</div>
 		</div>
 		<!-- //search_result -->

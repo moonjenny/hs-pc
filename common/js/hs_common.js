@@ -1,31 +1,17 @@
+
 /* gnb */
-$(document).ready(function(){
-	var gnb = $(".gnb"),
-			dep = $("ul.depth01", gnb),
-			nav = $("> li", dep),
-			sub = ".sub_menu",
-			timer;
+$(function(){
+	gnb = $("nav");
+	gnbOpen = $("nav .gnb_open");
+	gnbOpenHei = $("nav .gnb_open ul").height();
 
-	nav.mouseover(function(){
-		var self = $(this),
-				h = self.height() + self.find(sub).height();
-		clearTimeout(timer);
-
-		nav.removeClass("hover");
-		self.addClass("hover");
-		$(sub).hide();
-		$(sub, self).show().css({"z-index":"100000"});
-
-		gnb.find(".bg").show();
-		dep.unbind("mouseout");
+	gnb.mouseover(function(){
+		gnbOpen.stop().slideDown(400);
 	});
-	nav.mouseleave(function(){
-		nav.removeClass("hover");
-		$(sub).hide();
-		gnb.find(".bg").hide();
+	gnb.mouseleave(function(){
+		gnbOpen.stop().slideUp(300);
 	});
 });
-
 
 /* Korean initialisation for the jQuery calendar extension. */
 /* Written by DaeKwon Kang (ncrash.dk@gmail.com), Edited by Genie and Myeongjin Lee. */
@@ -69,7 +55,40 @@ return datepicker.regional.ko;
 
 // 테이블 오른쪽 마우스 클릭
 $(document).ready(function(){
-	$('.input_click').bind('rightclick', function(){
-	    console.log('right click');
-	});
+	function ContextMenu(){
+		var cateLst = $(".category_code li");
+		var openCont = $(".open_menu");
+		var btnCont = $(".btn_contextmenu");
+
+		$("body").click(function(){
+			btnCont.removeClass("on");
+		});
+
+		if($("div").hasClass('category_code') === true) {
+			//기준코드관리 일 경우
+			cateLst.mouseenter(function() {
+				var index = cateLst.index(this);
+				openCont.on("contextmenu", function(event){
+					event.preventDefault();
+					btnCont.removeClass("on");
+					cateLst.eq(index).find(".btn_contextmenu").addClass("on");
+					cateLst.eq(index).find(".btn_contextmenu").css({top: event.pageY + "px",left: event.pageX + "px"});
+				}).bind("click", function(event) {
+					btnCont.removeClass("on");
+				});
+
+			});
+		}else{
+			//부품코드, 소프트웨어코드관리 일 경우
+			openCont.bind("contextmenu", function(event){
+				event.preventDefault();
+				btnCont.removeClass("on");
+				$(".btn_contextmenu").addClass("on");
+				$(".btn_contextmenu").css({top: event.pageY + "px",left: event.pageX + "px"});
+			}).bind("click", function(event) {
+				btnCont.removeClass("on");
+			});
+		}
+	}
+	ContextMenu();
 });

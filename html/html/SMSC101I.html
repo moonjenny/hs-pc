@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="ko">
 <head>
@@ -16,6 +17,30 @@
 	<script src="../common/js/jquery-3.3.1.min.js"></script>
 	<script src="../common/js/jquery-ui.min.js"></script>
 	<script src="../common/js/hs_common.js"></script>
+	<!-- 20190201 테이블 추가 -->
+	<script>
+		$(document).ready(function(){
+			function ContextBtn(){
+				//table tr 추가
+				$(".btn_contextmenu .btn_add").on("click",function(){
+					$(this).parent().parent().find('tbody:last').append(
+						'<tr>' +
+						'	<td class="algC open_menu"> &nbsp; </td>' +
+						'	<td> </td>' +
+						'	<td> </td>' +
+						'	<td> </td>' +
+						'</tr>'
+					);
+				});
+				//table tr 삭제
+				$(".btn_contextmenu .btn_del").on("click",function(){
+					console.log("btn_del");
+					$(this).parent().parent().find('tbody tr:last').remove();
+				});
+			}
+			ContextBtn();
+		});
+	</script>
 </head>
 
 <body>
@@ -277,7 +302,7 @@
 							</thead>
 							<tbody>
 								<tr>
-									<td class="algC">01</td>
+									<td class="algC open_menu">01</td> <!-- 20190201 클래스명 추가 -->
 									<td>
 										<input type="text" class="input_txt">
 									</td>
@@ -294,6 +319,12 @@
 								</tr>
 							</tbody>
 						</table>
+						<!-- 20190201 버튼 추가 -->
+						<div class="btn_contextmenu">
+							<button class="btn_add">추가</button>
+							<button class="btn_del">삭제</button>
+						</div>
+						<!-- //20190201 버튼 추가 -->
 					</div>
 				</li>
 				<!-- //중분류 코드 -->
@@ -324,7 +355,7 @@
 							</thead>
 							<tbody>
 								<tr>
-									<td class="algC">01</td>
+									<td class="algC open_menu">01</td> <!-- 20190201 클래스명 추가 -->
 									<td>
 										<input type="text" class="input_txt">
 									</td>
@@ -341,6 +372,11 @@
 								</tr>
 							</tbody>
 						</table>
+						<!-- 20190201 버튼 추가 -->
+						<div class="btn_contextmenu">
+							<button class="btn_add">추가</button>
+							<button class="btn_del" disabled>삭제</button>
+						</div>
 					</div>
 				</li>
 				<!-- //소분류 코드 -->

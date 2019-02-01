@@ -82,6 +82,17 @@
 							</div>
 						</div>
 					</li>
+					<!-- 20190201 추가 -->
+					<li>
+						<div class="tit"><label for="inpMember">신청자</label></div>
+						<div class="sel">
+							<div class="input_box">
+								<input type="text" class="input_txt" id="inpMember">
+								<a href="#n" class="btn_openpop" onclick="openPop('/common/EmployeeAll',680,640);return false;" title="사원 조회 팝업열기"><span>사원 조회 팝업열기</span></a>
+							</div>
+						</div>
+					</li>
+					<!-- //20190201 추가 -->
 					<li>
 						<div class="tit"><label for="selArea">신청자지역</label></div>
 						<div class="sel">
