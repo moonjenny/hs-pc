@@ -20,25 +20,41 @@
 	<!-- 20190201 테이블 추가 -->
 	<script>
 		$(document).ready(function(){
-			function ContextBtn(){
-				//table tr 추가
-				$(".btn_contextmenu .btn_add").on("click",function(){
-					$(this).parent().parent().find('tbody:last').append(
-						'<tr>' +
-						'	<td class="algC open_menu"> &nbsp; </td>' +
-						'	<td> </td>' +
-						'	<td> </td>' +
-						'	<td> </td>' +
-						'</tr>'
-					);
+			var cateLst = $(".category_code li");
+			var openCont = $(".open_menu");
+			var btnCont = $(".btn_contextmenu");
+
+			$("body").click(function(){
+				btnCont.removeClass("on");
+			});
+
+			cateLst.mouseenter(function() {
+				var index = cateLst.index(this);
+				console.log(index);
+
+				$(".tbl").on("contextmenu",".open_menu", function(event){
+					event.preventDefault();
+					console.log("right click");
+
+					btnCont.removeClass("on");
+					cateLst.eq(index).find(".btn_contextmenu").addClass("on");
+					cateLst.eq(index).find(".btn_contextmenu").css({top: event.pageY + "px",left: event.pageX + "px"});
+
 				});
-				//table tr 삭제
-				$(".btn_contextmenu .btn_del").on("click",function(){
-					console.log("btn_del");
-					$(this).parent().parent().find('tbody tr:last').remove();
-				});
-			}
-			ContextBtn();
+			});
+			$(".btn_contextmenu").on("click",".btn_add", function(e){
+				// start
+				console.log("add");
+				$(this).parent().parent().find('tfoot:last').append(
+					'<tr>' +
+					'	<td class="algC open_menu"> &nbsp; </td>' +
+					'	<td> </td>' +
+					'	<td> </td>' +
+					'	<td> </td>' +
+					'</tr>'
+				);
+			});
+
 		});
 	</script>
 </head>
@@ -171,107 +187,115 @@
 							</thead>
 							<tbody>
 								<tr>
-									<td class="algC">01</td>
+									<td class="algC open_menu">01</td> <!-- 20190201 클래스명 추가 -->
 									<td>자산구분</td>
 								</tr>
 								<tr>
-									<td class="algC">02</td>
+									<td class="algC open_menu">02</td> <!-- 20190201 클래스명 추가 -->
 									<td>자산소유구분</td>
 								</tr>
 								<tr>
-									<td class="algC">03</td>
+									<td class="algC open_menu">03</td> <!-- 20190201 클래스명 추가 -->
 									<td>지역구분</td>
 								</tr>
 								<tr>
-									<td class="algC">04</td>
+									<td class="algC open_menu">04</td> <!-- 20190201 클래스명 추가 -->
 									<td>지급문서구분</td>
 								</tr>
 								<tr>
-									<td class="algC">05</td>
+									<td class="algC open_menu">05</td> <!-- 20190201 클래스명 추가 -->
 									<td>자산상태구분</td>
 								</tr>
 								<tr>
-									<td class="algC">06</td>
+									<td class="algC open_menu">06</td> <!-- 20190201 클래스명 추가 -->
 									<td>신청사유</td>
 								</tr>
 								<tr>
-									<td class="algC">07</td>
+									<td class="algC open_menu">07</td> <!-- 20190201 클래스명 추가 -->
 									<td>단위</td>
 								</tr>
 								<tr>
-									<td class="algC">08</td>
+									<td class="algC open_menu">08</td> <!-- 20190201 클래스명 추가 -->
 									<td>결재상태</td>
 								</tr>
 								<tr>
-									<td class="algC">09</td>
+									<td class="algC open_menu">09</td> <!-- 20190201 클래스명 추가 -->
 									<td>요청처리상태</td>
 								</tr>
 								<tr>
-									<td class="algC">10</td>
+									<td class="algC open_menu">10</td> <!-- 20190201 클래스명 추가 -->
 									<td>완제품-제조사</td>
 								</tr>
 								<tr>
-									<td class="algC">11</td>
+									<td class="algC open_menu">11</td> <!-- 20190201 클래스명 추가 -->
 									<td>부품-제조사</td>
 								</tr>
 								<tr>
-									<td class="algC">12</td>
+									<td class="algC open_menu">12</td> <!-- 20190201 클래스명 추가 -->
 									<td>표준사양</td>
 								</tr>
 								<tr>
-									<td class="algC">13</td>
+									<td class="algC open_menu">13</td> <!-- 20190201 클래스명 추가 -->
 									<td>거래처</td>
 								</tr>
 								<tr>
-									<td class="algC">14</td>
+									<td class="algC open_menu">14</td> <!-- 20190201 클래스명 추가 -->
 									<td>지불조건</td>
 								</tr>
 								<tr>
-									<td class="algC">15</td>
+									<td class="algC open_menu">15</td> <!-- 20190201 클래스명 추가 -->
 									<td>소프트웨어구분</td>
 								</tr>
 								<tr>
-									<td class="algC">16</td>
+									<td class="algC open_menu">16</td> <!-- 20190201 클래스명 추가 -->
 									<td>소프트웨어-제조사</td>
 								</tr>
 								<tr>
-									<td class="algC">17</td>
+									<td class="algC open_menu">17</td> <!-- 20190201 클래스명 추가 -->
 									<td>업무사양용도</td>
 								</tr>
 								<tr>
-									<td class="algC">18</td>
+									<td class="algC open_menu">18</td> <!-- 20190201 클래스명 추가 -->
 									<td>실사종류</td>
 								</tr>
 								<tr>
-									<td class="algC">19</td>
+									<td class="algC open_menu">19</td> <!-- 20190201 클래스명 추가 -->
 									<td>자산위치정보</td>
 								</tr>
 								<tr>
-									<td class="algC">20</td>
+									<td class="algC open_menu">20</td> <!-- 20190201 클래스명 추가 -->
 									<td>구매사유</td>
 								</tr>
 								<tr>
-									<td class="algC">21</td>
+									<td class="algC open_menu">21</td> <!-- 20190201 클래스명 추가 -->
 									<td>자산용도</td>
 								</tr>
 								<tr>
-									<td class="algC">22</td>
+									<td class="algC open_menu">22</td> <!-- 20190201 클래스명 추가 -->
 									<td>IP사용지역구분</td>
 								</tr>
 								<tr>
-									<td class="algC">23</td>
+									<td class="algC open_menu">23</td> <!-- 20190201 클래스명 추가 -->
 									<td>IP신청사유</td>
 								</tr>
 								<tr>
-									<td class="algC">24</td>
+									<td class="algC open_menu">24</td> <!-- 20190201 클래스명 추가 -->
 									<td>회사구분</td>
 								</tr>
 								<tr>
-									<td class="algC">25</td>
+									<td class="algC open_menu">25</td> <!-- 20190201 클래스명 추가 -->
 									<td>발령구분</td>
 								</tr>
 							</tbody>
+							<!-- 20190201 추가 -->
+							<tfoot></tfoot>
 						</table>
+						<!-- 20190201 버튼 추가 -->
+						<div class="btn_contextmenu">
+							<button class="btn_add">추가</button>
+							<button class="btn_del">삭제</button>
+						</div>
+						<!-- //20190201 버튼 추가 -->
 					</div>
 				</li>
 				<!-- //대분류 코드 -->
@@ -318,6 +342,8 @@
 									</td>
 								</tr>
 							</tbody>
+							<!-- 20190201 추가 -->
+							<tfoot></tfoot>
 						</table>
 						<!-- 20190201 버튼 추가 -->
 						<div class="btn_contextmenu">
@@ -371,6 +397,8 @@
 									</td>
 								</tr>
 							</tbody>
+							<!-- 20190201 추가 -->
+							<tfoot></tfoot>
 						</table>
 						<!-- 20190201 버튼 추가 -->
 						<div class="btn_contextmenu">

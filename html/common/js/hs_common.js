@@ -73,10 +73,9 @@ $(document).ready(function(){
 					btnCont.removeClass("on");
 					cateLst.eq(index).find(".btn_contextmenu").addClass("on");
 					cateLst.eq(index).find(".btn_contextmenu").css({top: event.pageY + "px",left: event.pageX + "px"});
-				}).bind("click", function(event) {
+				}).on("click", function(event) {
 					btnCont.removeClass("on");
 				});
-
 			});
 		}else{
 			//부품코드, 소프트웨어코드관리 일 경우
@@ -85,10 +84,10 @@ $(document).ready(function(){
 				btnCont.removeClass("on");
 				$(".btn_contextmenu").addClass("on");
 				$(".btn_contextmenu").css({top: event.pageY + "px",left: event.pageX + "px"});
-			}).bind("click", function(event) {
+			}).on("click", function(event) {
 				btnCont.removeClass("on");
 			});
 		}
 	}
-	ContextMenu();
+	//ContextMenu();
 });
