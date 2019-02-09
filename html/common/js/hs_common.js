@@ -55,39 +55,7 @@ return datepicker.regional.ko;
 
 // 테이블 오른쪽 마우스 클릭
 $(document).ready(function(){
-	function ContextMenu(){
-		var cateLst = $(".category_code li");
-		var openCont = $(".open_menu");
-		var btnCont = $(".btn_contextmenu");
-
-		$("body").click(function(){
-			btnCont.removeClass("on");
-		});
-
-		if($("div").hasClass('category_code') === true) {
-			//기준코드관리 일 경우
-			cateLst.mouseenter(function() {
-				var index = cateLst.index(this);
-				openCont.on("contextmenu", function(event){
-					event.preventDefault();
-					btnCont.removeClass("on");
-					cateLst.eq(index).find(".btn_contextmenu").addClass("on");
-					cateLst.eq(index).find(".btn_contextmenu").css({top: event.pageY + "px",left: event.pageX + "px"});
-				}).on("click", function(event) {
-					btnCont.removeClass("on");
-				});
-			});
-		}else{
-			//부품코드, 소프트웨어코드관리 일 경우
-			openCont.bind("contextmenu", function(event){
-				event.preventDefault();
-				btnCont.removeClass("on");
-				$(".btn_contextmenu").addClass("on");
-				$(".btn_contextmenu").css({top: event.pageY + "px",left: event.pageX + "px"});
-			}).on("click", function(event) {
-				btnCont.removeClass("on");
-			});
-		}
-	}
-	//ContextMenu();
+	$("body").click(function(){
+		$(".btn_contextmenu").removeClass("on");
+	});
 });
