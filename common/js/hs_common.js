@@ -55,4 +55,7 @@ return datepicker.regional.ko;
 
 // 테이블 오른쪽 마우스 클릭
 $(document).ready(function(){
+	$("body").click(function(){
+		$(".btn_contextmenu").removeClass("on");
+	});
 });
