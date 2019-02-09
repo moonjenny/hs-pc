@@ -18,7 +18,6 @@
 		//소프트웨어코드 추가 삭제
 		$(document).ready(function(){
 			$("#softCode table").on("contextmenu",".open", function(event){
-				console.log("right");
 				event.preventDefault();
 
 				$(".btn_contextmenu").removeClass("on");
@@ -27,14 +26,12 @@
 				$("#codeBtn").css({top: event.pageY + "px",left: event.pageX + "px"});
 
 				$("#softCode table + table").on("contextmenu",".open", function(event){
-					console.log("table");
 					event.preventDefault();
 					$("#codeBtn .btn_del").removeAttr("disabled");
 				});
 			});
 			//테이블 추가
 			$("#codeBtn").on("click",".btn_add", function(e){
-				console.log("add");
 				$("#softCode table + table tbody:last").append(
 					'<tr>' +
 					'	<td class="algC open"> &nbsp; </td>' +
@@ -51,7 +48,6 @@
 			});
 			//테이블 삭제
 			$("#codeBtn").on("click",".btn_del", function(e){
-				console.log("del");
 				$("#softCode table + table tbody > tr:last").remove();
 			});
 		});
