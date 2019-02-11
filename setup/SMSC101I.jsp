@@ -67,17 +67,14 @@
 					'	<td class="algC open"> &nbsp; </td>' +
 					'	<td> <input type="text" class="input_txt"> </td>' +
 					'	<td>' +
-<<<<<<< HEAD
 					'		<select>' +
 					'			<option>사용</option>' +
 					'			<option>사용안함</option>' +
 					'		</select>' +
-=======
-					'		<select>' + 
-					'			<option>사용</option>' + 
-					'			<option>사용안함</option>' + 
-					'		</select>' + 
->>>>>>> 1c5154e84436bbd51fefaf5019ef922f8f9c2ac9
+					'		<select>' +
+					'			<option>사용</option>' +
+					'			<option>사용안함</option>' +
+					'		</select>' +
 					'	</td>' +
 					'	<td> <input type="text" class="input_txt"> </td>' +
 					'</tr>'
@@ -111,17 +108,14 @@
 					'	<td class="algC open"> &nbsp; </td>' +
 					'	<td> <input type="text" class="input_txt"> </td>' +
 					'	<td>' +
-<<<<<<< HEAD
 					'		<select>' +
 					'			<option>사용</option>' +
 					'			<option>사용안함</option>' +
 					'		</select>' +
-=======
-					'		<select>' + 
-					'			<option>사용</option>' + 
-					'			<option>사용안함</option>' + 
-					'		</select>' + 
->>>>>>> 1c5154e84436bbd51fefaf5019ef922f8f9c2ac9
+					'		<select>' +
+					'			<option>사용</option>' +
+					'			<option>사용안함</option>' +
+					'		</select>' +
 					'	</td>' +
 					'	<td> <input type="text" class="input_txt"> </td>' +
 					'</tr>'
