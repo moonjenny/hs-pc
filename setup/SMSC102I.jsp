@@ -40,10 +40,17 @@
 					'	<td> <input type="text" class="input_txt"> </td>' +
 					'	<td> <input type="text" class="input_txt"> </td>' +
 					'	<td>' +
+<<<<<<< HEAD
 					'		<select>' +
 					'			<option>사용</option>' +
 					'			<option>사용안함</option>' +
 					'		</select>' +
+=======
+					'		<select>' + 
+					'			<option>사용</option>' + 
+					'			<option>사용안함</option>' + 
+					'		</select>' + 
+>>>>>>> 1c5154e84436bbd51fefaf5019ef922f8f9c2ac9
 					'	</td>' +
 					'</tr>'
 				);
@@ -213,7 +220,11 @@
 			<button class="btn_add">추가</button>
 			<button class="btn_del" disabled="disabled">삭제</button>
 		</div>
+<<<<<<< HEAD
 
+=======
+		
+>>>>>>> 1c5154e84436bbd51fefaf5019ef922f8f9c2ac9
 		<div class="paginate">
 			<a href="#n" class="pBtn first"><em>맨처음</em></a>
 			<a href="#n" class="pBtn prev"><em>이전페이지</em></a>
