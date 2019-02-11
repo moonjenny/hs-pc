@@ -71,10 +71,6 @@
 					'			<option>사용</option>' +
 					'			<option>사용안함</option>' +
 					'		</select>' +
-					'		<select>' +
-					'			<option>사용</option>' +
-					'			<option>사용안함</option>' +
-					'		</select>' +
 					'	</td>' +
 					'	<td> <input type="text" class="input_txt"> </td>' +
 					'</tr>'
@@ -108,10 +104,6 @@
 					'	<td class="algC open"> &nbsp; </td>' +
 					'	<td> <input type="text" class="input_txt"> </td>' +
 					'	<td>' +
-					'		<select>' +
-					'			<option>사용</option>' +
-					'			<option>사용안함</option>' +
-					'		</select>' +
 					'		<select>' +
 					'			<option>사용</option>' +
 					'			<option>사용안함</option>' +

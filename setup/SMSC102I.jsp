@@ -44,10 +44,6 @@
 					'			<option>사용</option>' +
 					'			<option>사용안함</option>' +
 					'		</select>' +
-					'		<select>' +
-					'			<option>사용</option>' +
-					'			<option>사용안함</option>' +
-					'		</select>' +
 					'	</td>' +
 					'</tr>'
 				);
