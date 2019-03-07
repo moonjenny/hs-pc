@@ -1,18 +1,3 @@
-
-/* gnb */
-$(function(){
-	gnb = $("nav");
-	gnbOpen = $("nav .gnb_open");
-	gnbOpenHei = $("nav .gnb_open ul").height();
-
-	gnb.mouseover(function(){
-		gnbOpen.stop().slideDown(400);
-	});
-	gnb.mouseleave(function(){
-		gnbOpen.stop().slideUp(300);
-	});
-});
-
 /* Korean initialisation for the jQuery calendar extension. */
 /* Written by DaeKwon Kang (ncrash.dk@gmail.com), Edited by Genie and Myeongjin Lee. */
 ( function( factory ) {

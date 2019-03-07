@@ -148,7 +148,14 @@
 						<col>
 						<col style="width:120px">
 					</colgroup>
-					<tbody></tbody>
+					<tbody>
+						<tr class="blind">
+							<td class="algC open">빈 테이블 생성</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+						</tr>
+					</tbody>
 				</table>
 				<!-- //20190211 테이블 추가 -->
 			</div>

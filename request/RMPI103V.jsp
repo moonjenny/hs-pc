@@ -140,7 +140,7 @@
 						</tr>
 						<tr>
 							<td class="algC">247754</td>
-							<td><a href="#n">안시내_IP신청</a></td>
+							<td><a href="#n" onclick="openPop('RMPI105I',1300,1000);return false;">안시내_IP신청</a></td>
 							<td>안시내</td>
 							<td>효성중공업</td>
 							<td>효성중공업(주) 중공업PG 전력PU 초고압변압기해외영업1팀</td>

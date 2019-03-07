@@ -1,48 +1,31 @@
-<!doctype html>
-<html lang="ko">
-<head>
-	<meta charset="utf-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-	<meta name="viewport" content="width=device-width, initial-scale=1" />
-	<meta name="robots" content="noindex, nofollow" />
-	<title>IP신청문서승인반려 | IP신청관리 | PC관리 시스템</title>
-	<link rel="stylesheet" href="../common/css/reset.css" />
-	<link rel="stylesheet" href="../common/css/common.css" />
-	<link rel="stylesheet" href="../common/css/jquery-ui.min.css" />
-	<link rel="stylesheet" href="../common/css/etc.css" />
-	<!-- 사이트 별 정의된 스타일시트 삽입 : 시작 -->
-	<link rel="stylesheet" href="../common/css/hs_pc.css" />
-	<!-- 사이트 별 정의된 스타일시트 삽입 : 종료 -->
-	<script src="../common/js/jquery-3.3.1.min.js"></script>
-	<script src="../common/js/jquery-ui.min.js"></script>
-	<script src="../common/js/hs_common.js"></script>
-	<!-- 팝업창 띄우기 -->
-	<script>
-		function openPop(pop,winW,winH,scrollbars) {
-		//min(250, 150) IE7, IE8
-	   var status = "toolbar=no,location=no,directories=no,status=no,menubar=no,resizable=yes,scrollbars="+'yes'+", width="+winW+", height="+winH+",left=0, top=0";
-	   window.open(pop+'.html', 'win', status);
-	}
-	</script>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@include file="/include/header.jsp"%>
+<%
+	String page_title = "IP신청문서승인반려";
+%>
 
-	<!-- 달력 -->
-	<script>
-		$( function() {
-			$.datepicker.setDefaults( $.datepicker.regional[ "ko" ] );
-			$( "#datepicker" ).datepicker({
-				showOn: "button",
-				buttonText: "날짜 선택하기"
-			});
-		});
-	</script>
+<!-- 팝업창 띄우기 -->
+<script>
+function openPop(pop,winW,winH,scrollbars) {
+//min(250, 150) IE7, IE8
+var status = "toolbar=no,location=no,directories=no,status=no,menubar=no,resizable=yes,scrollbars="+'yes'+", width="+winW+", height="+winH+",left=0, top=0";
+window.open(pop+'.html', 'win', status);
+}
+</script>
 
-</head>
-
-<body>
-
+<!-- 달력 -->
+<script>
+$( function() {
+	$.datepicker.setDefaults( $.datepicker.regional[ "ko" ] );
+	$( "#datepicker" ).datepicker({
+		showOn: "button",
+		buttonText: "날짜 선택하기"
+	});
+});
+</script>
 	<div id="pop_wrap">
 		<div class="pop_header">
-			<h1>IP신청문서승인반려</h1>
+			<h1><%=page_title%></h1>
 		</div>
 		<button type="button" class="btn_pop_close" onclick="window.close();">닫기</button>
 		<!-- pop_contents -->
@@ -284,8 +267,6 @@
 			<!-- //신청사유 상세내용 -->
 		</div>
 		<!-- //pop_contents -->
-	</div>
-	<!-- //pop_wrap -->
-</body>
 
-</html>
+
+<%@include file="/include/popup_footer.jsp"%>
